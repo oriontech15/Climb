@@ -7,8 +7,11 @@
 //
 
 #import "AddGoalViewController.h"
+#import "AddHeaderGoalTableViewCell.h"
 
 @interface AddGoalViewController ()
+
+@property (nonatomic) AddHeaderGoalTableViewCell *goalTitleCell;
 
 @end
 
@@ -17,6 +20,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)headerGoalButtonTapped:(id)sender
+{
+    NSLog(@"TextField Text: %@", self.goalTitleCell.goalTitleTextField.text);
 }
 
 - (void)didReceiveMemoryWarning {

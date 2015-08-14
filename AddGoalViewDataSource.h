@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
 
-@interface AddGoalViewDataSource : NSObject <UITableViewDataSource>
+@interface AddGoalViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -11,27 +11,40 @@
 
 @interface AddGoalViewDataSource ()
 
-@property (nonatomic) AddHeaderGoalTableViewCell *goalTitleCell;
-
 @end
 
 @implementation AddGoalViewDataSource
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addCell"];
+
+    if (indexPath.row == 0)
+    {
+        AddHeaderGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addCell"];
+        return cell;
+    }
     
-    return cell;
+    else
+    {
+         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"descriptionCell"];
+        return cell;
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
-- (IBAction)headerGoalButtonTapped:(id)sender
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"TextField Text: %@", self.goalTitleCell.goalTitleTextField.text);
+    if (indexPath.row == 0) {
+        return 44;
+    }
+    else
+    {
+        return 125;
+    }
 }
 
 @end
