@@ -9,11 +9,21 @@
 /* Begin PBXBuildFile section */
 		DB46B8A81B66E3D400A3811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8A71B66E3D400A3811A /* main.m */; };
 		DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AA1B66E3D400A3811A /* AppDelegate.m */; };
-		DB46B8AE1B66E3D400A3811A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AD1B66E3D400A3811A /* ViewController.m */; };
+		DB46B8AE1B66E3D400A3811A /* GoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AD1B66E3D400A3811A /* GoalViewController.m */; };
 		DB46B8B11B66E3D400A3811A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB46B8AF1B66E3D400A3811A /* Main.storyboard */; };
 		DB46B8B31B66E3D400A3811A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB46B8B21B66E3D400A3811A /* Images.xcassets */; };
 		DB46B8B61B66E3D400A3811A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB46B8B41B66E3D400A3811A /* LaunchScreen.xib */; };
 		DB46B8C21B66E3D400A3811A /* framedUPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8C11B66E3D400A3811A /* framedUPTests.m */; };
+		DB9DFF791B7D53B000411E0B /* AddHeaderGoalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9DFF781B7D53B000411E0B /* AddHeaderGoalTableViewCell.m */; };
+		DBB2308C1B7AB00700D876B0 /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2308B1B7AB00700D876B0 /* AddGoalViewController.m */; };
+		DBB2308F1B7AB05D00D876B0 /* GoalsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2308E1B7AB05D00D876B0 /* GoalsListViewController.m */; };
+		DBB230921B7AB0A900D876B0 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230911B7AB0A900D876B0 /* Goal.m */; };
+		DBB230951B7AB0B800D876B0 /* SubGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230941B7AB0B800D876B0 /* SubGoal.m */; };
+		DBB230981B7AB0D100D876B0 /* GoalController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230971B7AB0D100D876B0 /* GoalController.m */; };
+		DBB2309B1B7AB0F700D876B0 /* GoalsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309A1B7AB0F700D876B0 /* GoalsDetailViewController.m */; };
+		DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */; };
+		DBB230A31B7AB22E00D876B0 /* AddGoalViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A21B7AB22E00D876B0 /* AddGoalViewDataSource.m */; };
+		DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +42,34 @@
 		DB46B8A71B66E3D400A3811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB46B8A91B66E3D400A3811A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB46B8AA1B66E3D400A3811A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB46B8AC1B66E3D400A3811A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB46B8AD1B66E3D400A3811A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB46B8AC1B66E3D400A3811A /* GoalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GoalViewController.h; path = framedUP/GoalViewController.h; sourceTree = "<group>"; };
+		DB46B8AD1B66E3D400A3811A /* GoalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GoalViewController.m; path = framedUP/GoalViewController.m; sourceTree = "<group>"; };
 		DB46B8B01B66E3D400A3811A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB46B8B21B66E3D400A3811A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DB46B8B51B66E3D400A3811A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DB46B8BB1B66E3D400A3811A /* framedUPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = framedUPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46B8C01B66E3D400A3811A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB46B8C11B66E3D400A3811A /* framedUPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = framedUPTests.m; sourceTree = "<group>"; };
+		DB9DFF771B7D53B000411E0B /* AddHeaderGoalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHeaderGoalTableViewCell.h; sourceTree = "<group>"; };
+		DB9DFF781B7D53B000411E0B /* AddHeaderGoalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHeaderGoalTableViewCell.m; sourceTree = "<group>"; };
+		DBB2308A1B7AB00700D876B0 /* AddGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddGoalViewController.h; path = framedUP/AddGoalViewController.h; sourceTree = "<group>"; };
+		DBB2308B1B7AB00700D876B0 /* AddGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoalViewController.m; path = framedUP/AddGoalViewController.m; sourceTree = "<group>"; };
+		DBB2308D1B7AB05D00D876B0 /* GoalsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsListViewController.h; path = framedUP/GoalsListViewController.h; sourceTree = "<group>"; };
+		DBB2308E1B7AB05D00D876B0 /* GoalsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsListViewController.m; path = framedUP/GoalsListViewController.m; sourceTree = "<group>"; };
+		DBB230901B7AB0A900D876B0 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		DBB230911B7AB0A900D876B0 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		DBB230931B7AB0B800D876B0 /* SubGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGoal.h; sourceTree = "<group>"; };
+		DBB230941B7AB0B800D876B0 /* SubGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGoal.m; sourceTree = "<group>"; };
+		DBB230961B7AB0D100D876B0 /* GoalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalController.h; sourceTree = "<group>"; };
+		DBB230971B7AB0D100D876B0 /* GoalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalController.m; sourceTree = "<group>"; };
+		DBB230991B7AB0F700D876B0 /* GoalsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsDetailViewController.h; path = framedUP/GoalsDetailViewController.h; sourceTree = "<group>"; };
+		DBB2309A1B7AB0F700D876B0 /* GoalsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsDetailViewController.m; path = framedUP/GoalsDetailViewController.m; sourceTree = "<group>"; };
+		DBB2309D1B7AB1FD00D876B0 /* DetailViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerDataSource.h; sourceTree = "<group>"; };
+		DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerDataSource.m; sourceTree = "<group>"; };
+		DBB230A11B7AB22E00D876B0 /* AddGoalViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGoalViewDataSource.h; sourceTree = "<group>"; };
+		DBB230A21B7AB22E00D876B0 /* AddGoalViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGoalViewDataSource.m; sourceTree = "<group>"; };
+		DBB230A41B7AB24F00D876B0 /* GoalsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsListViewDataSource.h; sourceTree = "<group>"; };
+		DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +93,8 @@
 		DB46B8991B66E3D400A3811A = {
 			isa = PBXGroup;
 			children = (
+				DBB230A01B7AB20900D876B0 /* DataSources */,
+				DBB2309C1B7AB10E00D876B0 /* Views */,
 				DB46B8A41B66E3D400A3811A /* framedUP */,
 				DB46B8BE1B66E3D400A3811A /* framedUPTests */,
 				DB46B8A31B66E3D400A3811A /* Products */,
@@ -83,8 +115,12 @@
 			children = (
 				DB46B8A91B66E3D400A3811A /* AppDelegate.h */,
 				DB46B8AA1B66E3D400A3811A /* AppDelegate.m */,
-				DB46B8AC1B66E3D400A3811A /* ViewController.h */,
-				DB46B8AD1B66E3D400A3811A /* ViewController.m */,
+				DBB230901B7AB0A900D876B0 /* Goal.h */,
+				DBB230911B7AB0A900D876B0 /* Goal.m */,
+				DBB230931B7AB0B800D876B0 /* SubGoal.h */,
+				DBB230941B7AB0B800D876B0 /* SubGoal.m */,
+				DBB230961B7AB0D100D876B0 /* GoalController.h */,
+				DBB230971B7AB0D100D876B0 /* GoalController.m */,
 				DB46B8AF1B66E3D400A3811A /* Main.storyboard */,
 				DB46B8B21B66E3D400A3811A /* Images.xcassets */,
 				DB46B8B41B66E3D400A3811A /* LaunchScreen.xib */,
@@ -117,6 +153,36 @@
 				DB46B8C01B66E3D400A3811A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBB2309C1B7AB10E00D876B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB46B8AC1B66E3D400A3811A /* GoalViewController.h */,
+				DB46B8AD1B66E3D400A3811A /* GoalViewController.m */,
+				DBB2308A1B7AB00700D876B0 /* AddGoalViewController.h */,
+				DBB2308B1B7AB00700D876B0 /* AddGoalViewController.m */,
+				DBB2308D1B7AB05D00D876B0 /* GoalsListViewController.h */,
+				DBB2308E1B7AB05D00D876B0 /* GoalsListViewController.m */,
+				DBB230991B7AB0F700D876B0 /* GoalsDetailViewController.h */,
+				DBB2309A1B7AB0F700D876B0 /* GoalsDetailViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DBB230A01B7AB20900D876B0 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				DBB2309D1B7AB1FD00D876B0 /* DetailViewControllerDataSource.h */,
+				DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */,
+				DBB230A11B7AB22E00D876B0 /* AddGoalViewDataSource.h */,
+				DBB230A21B7AB22E00D876B0 /* AddGoalViewDataSource.m */,
+				DB9DFF771B7D53B000411E0B /* AddHeaderGoalTableViewCell.h */,
+				DB9DFF781B7D53B000411E0B /* AddHeaderGoalTableViewCell.m */,
+				DBB230A41B7AB24F00D876B0 /* GoalsListViewDataSource.h */,
+				DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */,
+			);
+			name = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +285,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB46B8AE1B66E3D400A3811A /* ViewController.m in Sources */,
+				DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */,
+				DBB2309B1B7AB0F700D876B0 /* GoalsDetailViewController.m in Sources */,
+				DBB230921B7AB0A900D876B0 /* Goal.m in Sources */,
+				DB46B8AE1B66E3D400A3811A /* GoalViewController.m in Sources */,
+				DBB230981B7AB0D100D876B0 /* GoalController.m in Sources */,
+				DB9DFF791B7D53B000411E0B /* AddHeaderGoalTableViewCell.m in Sources */,
+				DBB2308F1B7AB05D00D876B0 /* GoalsListViewController.m in Sources */,
+				DBB2308C1B7AB00700D876B0 /* AddGoalViewController.m in Sources */,
 				DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */,
+				DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */,
+				DBB230951B7AB0B800D876B0 /* SubGoal.m in Sources */,
 				DB46B8A81B66E3D400A3811A /* main.m in Sources */,
+				DBB230A31B7AB22E00D876B0 /* AddGoalViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +492,7 @@
 				DB46B8C71B66E3D400A3811A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB46B8C81B66E3D400A3811A /* Build configuration list for PBXNativeTarget "framedUPTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +501,7 @@
 				DB46B8CA1B66E3D400A3811A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

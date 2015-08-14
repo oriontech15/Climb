@@ -6,18 +6,20 @@
 //  Copyright (c) 2015 Justin Smith. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GoalViewController.h"
 
-@interface ViewController ()
+@interface GoalViewController ()
 
 @end
 
-@implementation ViewController
+@implementation GoalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
