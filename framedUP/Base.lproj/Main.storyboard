@@ -87,36 +87,21 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="addCell" rowHeight="44" id="qd4-Co-KFl" customClass="AddHeaderGoalTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalTitleCell" rowHeight="44" id="qd4-Co-KFl" customClass="AddHeaderGoalTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qd4-Co-KFl" id="n8B-Po-SiG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSN-Vt-nrL">
-                                                    <rect key="frame" x="546" y="7" width="40" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="t0B-Gw-MhN"/>
-                                                    </constraints>
-                                                    <state key="normal" image="grayRing">
-                                                        <color key="titleColor" red="0.12941176469999999" green="0.99607843139999996" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="headerGoalButtonTapped:" destination="eQh-vg-Jut" eventType="touchUpInside" id="OaA-O6-ubl"/>
-                                                    </connections>
-                                                </button>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Goal Title" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-xV-Qr1">
-                                                    <rect key="frame" x="8" y="7" width="530" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Goal Title" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Y1R-xV-Qr1">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="HSN-Vt-nrL" secondAttribute="trailing" constant="-1" id="Fyb-sP-yDb"/>
-                                                <constraint firstItem="Y1R-xV-Qr1" firstAttribute="leading" secondItem="n8B-Po-SiG" secondAttribute="leadingMargin" constant="-7" id="mMw-tP-fLN"/>
-                                                <constraint firstItem="HSN-Vt-nrL" firstAttribute="centerY" secondItem="n8B-Po-SiG" secondAttribute="centerY" id="tbQ-yc-gbl"/>
-                                                <constraint firstItem="HSN-Vt-nrL" firstAttribute="leading" secondItem="Y1R-xV-Qr1" secondAttribute="trailing" constant="8" symbolic="YES" id="v3T-Wb-9YD"/>
-                                                <constraint firstItem="HSN-Vt-nrL" firstAttribute="top" secondItem="Y1R-xV-Qr1" secondAttribute="top" id="yth-MG-R7Q"/>
+                                                <constraint firstItem="Y1R-xV-Qr1" firstAttribute="centerY" secondItem="n8B-Po-SiG" secondAttribute="centerY" id="Txq-BM-QeQ"/>
+                                                <constraint firstItem="Y1R-xV-Qr1" firstAttribute="centerX" secondItem="n8B-Po-SiG" secondAttribute="centerX" id="jvd-bf-xvD"/>
+                                                <constraint firstItem="Y1R-xV-Qr1" firstAttribute="leading" secondItem="n8B-Po-SiG" secondAttribute="leadingMargin" id="mMw-tP-fLN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -124,13 +109,13 @@
                                             <outlet property="goalTitleTextField" destination="Y1R-xV-Qr1" id="dzb-Tz-rDl"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="descriptionCell" rowHeight="115" id="i9r-6b-md5" customClass="AddHeaderGoalTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="descriptionCell" rowHeight="115" id="i9r-6b-md5" customClass="DescriptionTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i9r-6b-md5" id="hYC-QM-4GC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gee-ix-8MD">
-                                                    <rect key="frame" x="8" y="28.5" width="584" height="77.5"/>
+                                                    <rect key="frame" x="8" y="29" width="584" height="78"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="5lC-MS-ZPG"/>
@@ -138,8 +123,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeO-ex-2ja">
-                                                    <rect key="frame" x="8" y="0.0" width="42" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeO-ex-2ja">
+                                                    <rect key="frame" x="8" y="0.0" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -155,11 +140,103 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="descriptionTextView" destination="Gee-ix-8MD" id="smg-mC-KZu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="subGoalCell" rowHeight="44" id="0aD-Uz-LDf" customClass="SubGoalTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0aD-Uz-LDf" id="gkU-Hy-nmS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-yB-0Wr">
+                                                    <rect key="frame" x="8" y="7" width="536" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSN-Vt-nrL">
+                                                    <rect key="frame" x="552" y="8" width="40" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="t0B-Gw-MhN"/>
+                                                    </constraints>
+                                                    <state key="normal" image="grayRing">
+                                                        <color key="titleColor" red="0.12941176469999999" green="0.99607843139999996" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="subGoalAddButtonTapped:" destination="eQh-vg-Jut" eventType="touchUpInside" id="wyd-kJ-Tkv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HSN-Vt-nrL" firstAttribute="bottom" secondItem="Zkg-yB-0Wr" secondAttribute="bottom" id="HJT-R8-MDk"/>
+                                                <constraint firstItem="HSN-Vt-nrL" firstAttribute="top" secondItem="gkU-Hy-nmS" secondAttribute="topMargin" id="IzT-ae-UD1"/>
+                                                <constraint firstItem="HSN-Vt-nrL" firstAttribute="leading" secondItem="Zkg-yB-0Wr" secondAttribute="trailing" constant="8" symbolic="YES" id="WHb-KN-Thf"/>
+                                                <constraint firstItem="Zkg-yB-0Wr" firstAttribute="leading" secondItem="gkU-Hy-nmS" secondAttribute="leadingMargin" id="aRa-B4-t5P"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HSN-Vt-nrL" secondAttribute="trailing" id="bwM-na-Gh0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="subGoalAddButton" destination="HSN-Vt-nrL" id="NCv-gM-Hbb"/>
+                                            <outlet property="subGoalTextField" destination="Zkg-yB-0Wr" id="XmE-V1-6BW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalDateCell" rowHeight="197" id="jPm-hF-ZIU" customClass="DatePickerTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jPm-hF-ZIU" id="MUq-Te-FGo">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fca-Sp-EOT">
+                                                    <rect key="frame" x="8" y="0.0" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="Ud5-kp-5Fx"/>
+                                                        <constraint firstAttribute="height" constant="21" id="ilb-jt-Onp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-U4-R4m">
+                                                    <rect key="frame" x="8" y="23" width="584" height="162"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="461526982.633928">
+                                                        <!--2015-08-17 17:56:22 +0000-->
+                                                    </date>
+                                                    <connections>
+                                                        <action selector="getSelectedDate:" destination="eQh-vg-Jut" eventType="valueChanged" id="N8K-m4-wgT"/>
+                                                    </connections>
+                                                </datePicker>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-22-eA3">
+                                                    <rect key="frame" x="58" y="-1" width="534" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="534" id="Kho-y8-ZcY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fca-Sp-EOT" firstAttribute="top" secondItem="MUq-Te-FGo" secondAttribute="topMargin" constant="-8" id="3LO-If-d13"/>
+                                                <constraint firstItem="Wjo-U4-R4m" firstAttribute="top" secondItem="hVY-22-eA3" secondAttribute="bottom" constant="3" id="IAG-QX-DMT"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wjo-U4-R4m" secondAttribute="trailing" constant="8" id="QLx-qd-rhk"/>
+                                                <constraint firstItem="hVY-22-eA3" firstAttribute="top" secondItem="MUq-Te-FGo" secondAttribute="topMargin" constant="-9" id="QZ0-Vf-nXB"/>
+                                                <constraint firstItem="Wjo-U4-R4m" firstAttribute="top" secondItem="fca-Sp-EOT" secondAttribute="bottom" constant="2" id="Qry-lY-4kR"/>
+                                                <constraint firstItem="hVY-22-eA3" firstAttribute="leading" secondItem="fca-Sp-EOT" secondAttribute="trailing" constant="8" symbolic="YES" id="Xp1-3F-lqD"/>
+                                                <constraint firstItem="Wjo-U4-R4m" firstAttribute="leading" secondItem="MUq-Te-FGo" secondAttribute="leading" constant="8" id="d4X-zY-MeT"/>
+                                                <constraint firstItem="fca-Sp-EOT" firstAttribute="leading" secondItem="MUq-Te-FGo" secondAttribute="leadingMargin" id="x40-uT-CZZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="dateViewLabel" destination="hVY-22-eA3" id="uG8-l1-NmB"/>
+                                            <outlet property="goalDatePicker" destination="Wjo-U4-R4m" id="0GK-g9-urV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="pIL-53-eor" id="ft2-UX-B4S"/>
-                                    <outlet property="delegate" destination="eQh-vg-Jut" id="ogb-Jm-P1R"/>
+                                    <outlet property="delegate" destination="pIL-53-eor" id="hKK-FS-hOE"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -177,9 +254,12 @@
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ot6-vn-tQt" id="2yh-cc-RZJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yt9-TP-tbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="pIL-53-eor" customClass="AddGoalViewDataSource"/>
+                <customObject id="pIL-53-eor" customClass="GoalTitleViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="2101" y="-183"/>
         </scene>
@@ -248,7 +328,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoalBackground" translatesAutoresizingMaskIntoConstraints="NO" id="QGP-tf-Lsk">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PinkMountainWallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="QGP-tf-Lsk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
@@ -307,6 +387,7 @@
     </scenes>
     <resources>
         <image name="GoalBackground" width="414" height="736"/>
+        <image name="PinkMountainWallpaper" width="375" height="667"/>
         <image name="grayRing" width="29" height="29"/>
         <image name="greenRing" width="29" height="29"/>
         <image name="slyphHome" width="29" height="29"/>

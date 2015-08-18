@@ -10,4 +10,8 @@
 
 @interface GoalController : NSObject
 
+@property (nonatomic) NSMutableArray *cells;
+
++(GoalController *)sharedInstance;
+
 @end

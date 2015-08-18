@@ -10,4 +10,15 @@
 
 @implementation GoalController
 
++(GoalController *)sharedInstance
+{
+    static GoalController *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [GoalController new];
+    });
+    
+    return sharedInstance;
+}
+
 @end
