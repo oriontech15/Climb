@@ -10,4 +10,9 @@
 
 @implementation Goal
 
+@dynamic subGoal;
+@dynamic goalDescription;
+@dynamic goalTitle;
+@dynamic goalDate;
+
 @end

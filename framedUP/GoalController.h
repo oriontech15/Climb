@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Goal.h"
 
 @interface GoalController : NSObject
 
 @property (nonatomic) NSMutableArray *cells;
 
 +(GoalController *)sharedInstance;
+
+- (void)removeGoal:(Goal *)goal;
+- (Goal *)createGoal;
+- (void)save;
 
 @end

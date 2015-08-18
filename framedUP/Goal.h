@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Goal : NSObject
+@interface Goal : NSManagedObject
+
+@property (nonatomic) NSString *subGoal;
+@property (nonatomic) NSString *goalDescription;
+@property (nonatomic) NSString *goalTitle;
+@property (nonatomic) NSDate *goalDate;
 
 @end

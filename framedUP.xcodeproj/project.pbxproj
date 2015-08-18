@@ -27,6 +27,9 @@
 		DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */; };
 		DBB230A31B7AB22E00D876B0 /* GoalTitleViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A21B7AB22E00D876B0 /* GoalTitleViewDataSource.m */; };
 		DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */; };
+		DBF1B5361B83A7A2006E4DD0 /* DoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B5351B83A7A2006E4DD0 /* DoneTableViewCell.m */; };
+		DBF1B5391B83AF82006E4DD0 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B5381B83AF82006E4DD0 /* Stack.m */; };
+		DBF1B53C1B83B07D006E4DD0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,11 @@
 		DBB230A21B7AB22E00D876B0 /* GoalTitleViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTitleViewDataSource.m; sourceTree = "<group>"; };
 		DBB230A41B7AB24F00D876B0 /* GoalsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsListViewDataSource.h; sourceTree = "<group>"; };
 		DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListViewDataSource.m; sourceTree = "<group>"; };
+		DBF1B5341B83A7A2006E4DD0 /* DoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneTableViewCell.h; sourceTree = "<group>"; };
+		DBF1B5351B83A7A2006E4DD0 /* DoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneTableViewCell.m; sourceTree = "<group>"; };
+		DBF1B5371B83AF82006E4DD0 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		DBF1B5381B83AF82006E4DD0 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,10 +135,13 @@
 				DB46B8AA1B66E3D400A3811A /* AppDelegate.m */,
 				DBB230901B7AB0A900D876B0 /* Goal.h */,
 				DBB230911B7AB0A900D876B0 /* Goal.m */,
+				DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */,
 				DBB230931B7AB0B800D876B0 /* SubGoal.h */,
 				DBB230941B7AB0B800D876B0 /* SubGoal.m */,
 				DBB230961B7AB0D100D876B0 /* GoalController.h */,
 				DBB230971B7AB0D100D876B0 /* GoalController.m */,
+				DBF1B5371B83AF82006E4DD0 /* Stack.h */,
+				DBF1B5381B83AF82006E4DD0 /* Stack.m */,
 				DB46B8AF1B66E3D400A3811A /* Main.storyboard */,
 				DB46B8B21B66E3D400A3811A /* Images.xcassets */,
 				DB46B8B41B66E3D400A3811A /* LaunchScreen.xib */,
@@ -176,6 +187,8 @@
 				DB78EF651B825AF200F9262E /* DatePickerTableViewCell.m */,
 				DB78EF671B825B0D00F9262E /* SubGoalTableViewCell.h */,
 				DB78EF681B825B0D00F9262E /* SubGoalTableViewCell.m */,
+				DBF1B5341B83A7A2006E4DD0 /* DoneTableViewCell.h */,
+				DBF1B5351B83A7A2006E4DD0 /* DoneTableViewCell.m */,
 			);
 			name = AddViewCells;
 			sourceTree = "<group>";
@@ -308,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF1B5391B83AF82006E4DD0 /* Stack.m in Sources */,
 				DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */,
 				DB78EF691B825B0D00F9262E /* SubGoalTableViewCell.m in Sources */,
 				DBB2309B1B7AB0F700D876B0 /* GoalsDetailViewController.m in Sources */,
@@ -323,6 +337,8 @@
 				DBB230951B7AB0B800D876B0 /* SubGoal.m in Sources */,
 				DB46B8A81B66E3D400A3811A /* main.m in Sources */,
 				DB78EF661B825AF200F9262E /* DatePickerTableViewCell.m in Sources */,
+				DBF1B5361B83A7A2006E4DD0 /* DoneTableViewCell.m in Sources */,
+				DBF1B53C1B83B07D006E4DD0 /* Model.xcdatamodeld in Sources */,
 				DBB230A31B7AB22E00D876B0 /* GoalTitleViewDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +546,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */,
+			);
+			currentVersion = DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB46B89A1B66E3D400A3811A /* Project object */;
 }

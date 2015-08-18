@@ -54,7 +54,7 @@
         return cell;
     }
     
-    else
+    else if (indexPath.row == 3)
     {
         DatePickerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"goalDateCell"];
         
@@ -73,26 +73,36 @@
         NSLog(@"%ld", numberOfRows);
         return cell;
     }
+    
+    else
+    {
+        DoneTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"doneCell"];
+        
+        return cell;
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row){
         case 0:
             if(indexPath.section == 0)
-                return 44.0; // first row is 123pt high
+                return 44.0;
         case 1:
             if(indexPath.section == 0)
-                return 123.0; // first row is 123pt high
+                return 123.0;
         case 2:
             if(indexPath.section == 0)
-                return 44.0; // first row is 123pt high
+                return 44.0;
+        case 3:
+            if(indexPath.section == 0)
+                return 240.0;
         default:
-            return 153.0; // all other rows are 40pt high
+            return 44.0; // all other rows are 40pt high
     }
 }
 

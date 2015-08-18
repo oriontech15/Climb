@@ -13,6 +13,7 @@
 #import "DatePickerTableViewCell.h"
 #import "SubGoalTableViewCell.h"
 #import "DescriptionTableViewCell.h"
+#import "DoneTableViewCell.h"
 
 static NSInteger numberOfRows = 0;
 

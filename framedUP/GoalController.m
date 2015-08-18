@@ -7,6 +7,7 @@
 //
 
 #import "GoalController.h"
+#import "Stack.h"
 
 @implementation GoalController
 
@@ -19,6 +20,41 @@
     });
     
     return sharedInstance;
+}
+
+-(Goal *)createGoal
+{
+    Goal *goal = [NSEntityDescription insertNewObjectForEntityForName:@"Goal" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
+    return goal;
+}
+
+-(NSArray *)entries
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Goal"];
+    
+    NSError *error;
+    
+    NSArray *allEntries = [[Stack sharedInstance].managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (error)
+    {
+        NSLog(@"Error %@", error.localizedDescription);
+    }
+    
+    return allEntries;
+}
+
+//Remove an entry if called and not empty
+-(void)removeGoal:(Goal *)goal
+{
+    [goal.managedObjectContext deleteObject:goal];
+}
+
+//Save the existing entries by calling the saveToPersistentStorage method
+-(void)save
+{
+    [[Stack sharedInstance].managedObjectContext save:nil];
 }
 
 @end

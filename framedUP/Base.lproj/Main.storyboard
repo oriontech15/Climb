@@ -57,7 +57,7 @@
                     <navigationItem key="navigationItem" id="dv4-gC-Es4">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CeS-8C-RcW">
                             <connections>
-                                <segue destination="eQh-vg-Jut" kind="show" id="zJe-g7-FKL"/>
+                                <segue destination="eQh-vg-Jut" kind="show" id="JpS-AN-bBA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="1335" y="169"/>
         </scene>
-        <!--Add Goal View Controller-->
+        <!--Add A Goal-->
         <scene sceneID="gf5-HO-Iev">
             <objects>
                 <viewController id="eQh-vg-Jut" customClass="AddGoalViewController" sceneMemberID="viewController">
@@ -182,7 +182,7 @@
                                             <outlet property="subGoalTextField" destination="Zkg-yB-0Wr" id="XmE-V1-6BW"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalDateCell" rowHeight="197" id="jPm-hF-ZIU" customClass="DatePickerTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalDateCell" rowHeight="194" id="jPm-hF-ZIU" customClass="DatePickerTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jPm-hF-ZIU" id="MUq-Te-FGo">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -233,6 +233,33 @@
                                             <outlet property="goalDatePicker" destination="Wjo-U4-R4m" id="0GK-g9-urV"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doneCell" rowHeight="44" id="KYu-eX-ykC" customClass="DoneTableViewCell">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYu-eX-ykC" id="jbv-TZ-VJN">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To2-RI-ckB">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="44"/>
+                                                    <color key="backgroundColor" red="0.1687428949" green="0.65521326700000004" blue="0.68708570079999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="584" id="DyW-eg-X3j"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="h5h-Fr-XZN"/>
+                                                        <constraint firstAttribute="height" constant="44" id="uE7-TJ-Dgj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Done">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="To2-RI-ckB" firstAttribute="top" secondItem="jbv-TZ-VJN" secondAttribute="top" id="78V-Ml-WDG"/>
+                                                <constraint firstItem="To2-RI-ckB" firstAttribute="trailing" secondItem="jbv-TZ-VJN" secondAttribute="trailingMargin" id="CL2-Gd-vLj"/>
+                                                <constraint firstItem="To2-RI-ckB" firstAttribute="leading" secondItem="jbv-TZ-VJN" secondAttribute="leadingMargin" id="Or7-WC-xQe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="pIL-53-eor" id="ft2-UX-B4S"/>
@@ -242,7 +269,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Sag-Ts-UCq" firstAttribute="top" secondItem="ot6-vn-tQt" secondAttribute="bottom" constant="-44" id="1WW-14-ZP9"/>
+                            <constraint firstItem="Sag-Ts-UCq" firstAttribute="top" secondItem="ot6-vn-tQt" secondAttribute="bottom" id="1WW-14-ZP9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HNG-G2-HAX" secondAttribute="trailing" constant="-16" id="OYc-3m-EqO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ot6-vn-tQt" secondAttribute="trailing" constant="-16" id="OcR-1v-g9g"/>
                             <constraint firstItem="ot6-vn-tQt" firstAttribute="leading" secondItem="UmI-Xw-nxE" secondAttribute="leadingMargin" constant="-16" id="Zhx-kq-B8i"/>
@@ -253,7 +280,8 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationItem key="navigationItem" title="Add A Goal" id="HdK-NN-vOh"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ot6-vn-tQt" id="2yh-cc-RZJ"/>
                     </connections>
@@ -261,7 +289,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yt9-TP-tbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="pIL-53-eor" customClass="GoalTitleViewDataSource"/>
             </objects>
-            <point key="canvasLocation" x="2101" y="-183"/>
+            <point key="canvasLocation" x="2095" y="-137"/>
         </scene>
         <!--Title-->
         <scene sceneID="GYq-r6-jDi">
