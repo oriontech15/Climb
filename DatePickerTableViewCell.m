@@ -14,11 +14,6 @@
     // Initialization code
 }
 
-+(NSDate *)dateFromDatePickerUpdated
-{
-    
-}
-
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

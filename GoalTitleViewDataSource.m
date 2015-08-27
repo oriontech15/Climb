@@ -197,17 +197,6 @@
     [self.tableView reloadData];
 }
 
--(void)dateFromDatePickerUpdated:(DatePickerTableViewCell *)datePickerCell
-{
-    if (!self.goal) {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
-    
-    self.goal.goalDate = datePickerCell.goalDatePicker.date;
-    
-    NSLog(@"Date: %@", self.goal.goalDate);
-}
-
 -(void)saveChangesButtonTappedToSaveChanges
 {
     if (!self.goal)

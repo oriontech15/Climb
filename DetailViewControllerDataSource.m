@@ -46,6 +46,8 @@
         
         cell.dateLabel.text = getDate;
         
+        NSLog(@"GoalDate: %@", self.goal.goalDate);
+        
         NSLog(@"date: %@", getDate);
         NSLog(@"date cellText: %@", cell.dateLabel.text);
         

@@ -15,6 +15,7 @@ static NSString *DateUpdated = @"DateUpdated";
 
 @property (nonatomic) NSMutableArray *cells;
 @property (nonatomic, strong, readonly) NSArray *goals;
+@property (nonatomic, strong) NSDate *goalDate;
 
 +(GoalController *)sharedInstance;
 

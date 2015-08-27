@@ -28,8 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [GoalController sharedInstance].cells = [NSMutableArray new];
-    NSLog(@"array count: %ld", [GoalController sharedInstance].cells.count);
+    self.goal = [[GoalController sharedInstance] createGoal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +49,11 @@
     
     self.goalPickerCell.dateViewLabel.text = getDate;
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:DateUpdated object:nil];
+    [GoalController sharedInstance].goalDate = picker.date;
+    
+    self.goal.goalDate = [GoalController sharedInstance].goalDate;
+    
+    NSLog(@"GoalDate: %@", self.goal.goalDate);
     
     [self.tableView reloadData];
 }
