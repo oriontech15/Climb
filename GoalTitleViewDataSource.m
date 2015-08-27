@@ -8,11 +8,11 @@
 
 #import "GoalTitleViewDataSource.h"
 #import "GoalController.h"
-#import "SubGoal.h"
 
-@interface GoalTitleViewDataSource () <GoalTitleTableViewCellTextFieldDelegate, SubGoalTableViewCellDelegate, DescriptionTableViewCellDelegate, addSubGoalTableViewCellDelegate, saveChangesButtonTableViewCellDelegate>
+@interface GoalTitleViewDataSource () <GoalTitleTableViewCellTextFieldDelegate, SubGoalTableViewCellDelegate, DescriptionTableViewCellDelegate, addSubGoalTableViewCellDelegate, saveChangesButtonTableViewCellDelegate, DatePickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSDate *date;
 
 @end
 
@@ -60,7 +60,7 @@
     {
         DatePickerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"goalDateCell"];
         
-        //cell.delegate = self;
+        cell.delegate = self;
         
         NSDateFormatter *dateGoalFormat = [[NSDateFormatter alloc] init];
         
@@ -157,18 +157,18 @@
     self.goal.goalTitle = goaltitleCell.goalTitleTextField.text;
     
     NSLog(@"goaltitle: %@", self.goal.goalTitle);
+
 }
 
 //Implements the delegate method for the subGoalCell
 -(void)subGoalTextFieldUpdated:(SubGoalTableViewCell *)subGoalCell
 {
-    if (!self.subGoal) {
-        self.subGoal = [[GoalController sharedInstance] createSubGoal];
-    }
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:subGoalCell];
     
-    self.subGoal.subGoalTitle = subGoalCell.subGoalTextField.text;
+    SubGoal *subGoalToUpdateText = self.goal.subGoals[indexPath.row - 2];
     
-    NSLog(@"subGoalTitle: %@", self.subGoal.subGoalTitle);
+    subGoalToUpdateText.subGoalTitle = subGoalCell.subGoalTextField.text;
+    
 }
 
 //Implements the delegate method for the descriptionCell
@@ -186,13 +186,23 @@
 
 -(void)addSubGoalCellToTableView
 {
-    if (!self.goal)
-    {
+    if (!self.goal) {
         self.goal = [[GoalController sharedInstance] createGoal];
     }
-
+    
     SubGoal *newSubgoal = [[GoalController sharedInstance] createSubGoal];
     newSubgoal.goal = self.goal;
+    
+    
+    
+    [self.tableView reloadData];
+}
+
+-(void)dateValueChanged:(NSDate *)date
+{
+    self.goal.goalDate = date;
+    
+    NSLog(@"This is the DATE: %@", self.goal.goalDate);
     
     [self.tableView reloadData];
 }
@@ -203,6 +213,12 @@
     {
         self.goal = [[GoalController sharedInstance] createGoal];
     }
+    
+    NSLog(@"TITLE: %@", self.goal.goalTitle);
+    NSLog(@"DESCRIPTION: %@", self.goal.description);
+    NSLog(@"SUBGOAL: %@", self.subGoal.subGoalTitle);
+    NSLog(@"SUBGOAL DESCRIPTIONS: %@", self.goal.subGoals[0]);
+    NSLog(@"SUBGOAL DESCRIPTIONS: %@", self.goal.subGoals[1]);
     
     [[GoalController sharedInstance] save];
 }

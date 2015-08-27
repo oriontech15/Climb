@@ -14,6 +14,7 @@
 @interface GoalsListViewDataSource ()
 
 @property (nonatomic) DatePickerTableViewCell *datePickerCell;
+@property (nonatomic, strong) NSDate *date;
 
 @end
 
@@ -41,6 +42,7 @@
         NSString *getDate = [dateGoalFormat stringFromDate:self.goal.goalDate];
 
         cell.detailTextLabel.text = getDate;
+        
     }
     
     else

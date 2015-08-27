@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *addSubGoalButton;
 @property (weak, nonatomic) id<addSubGoalTableViewCellDelegate> delegate;
 
-
 @end
 
 @protocol addSubGoalTableViewCellDelegate <NSObject>

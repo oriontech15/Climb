@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Goal.h"
+#import "DatePickerTableViewCell.h"
 
 static NSString *DateUpdated = @"DateUpdated";
 

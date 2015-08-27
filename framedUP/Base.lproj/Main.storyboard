@@ -162,7 +162,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="0aD-Uz-LDf" id="5SL-qP-EWN"/>
+                                                        <outlet property="delegate" destination="0aD-Uz-LDf" id="mJx-6o-Hcm"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -226,7 +226,7 @@
                                                         <!--2015-08-17 17:56:22 +0000-->
                                                     </date>
                                                     <connections>
-                                                        <action selector="getSelectedDate:" destination="eQh-vg-Jut" eventType="valueChanged" id="N8K-m4-wgT"/>
+                                                        <action selector="dateValueChanged:" destination="jPm-hF-ZIU" eventType="valueChanged" id="6bU-IU-qg6"/>
                                                     </connections>
                                                 </datePicker>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-22-eA3">
@@ -321,7 +321,7 @@
                     <navigationItem key="navigationItem" title="Add A Goal" id="HdK-NN-vOh">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="T8g-13-TpT">
                             <connections>
-                                <action selector="cancelButtonTapped:" destination="eQh-vg-Jut" id="ttJ-Lk-APH"/>
+                                <action selector="cancelButtonTapped:" destination="eQh-vg-Jut" id="84H-ym-UG5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="2nc-Zn-ZJm">

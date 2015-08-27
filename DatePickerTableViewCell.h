@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DatePickerDelegate;
+
+
 @interface DatePickerTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIDatePicker *goalDatePicker;
 @property (strong, nonatomic) IBOutlet UILabel *dateViewLabel;
+@property (weak, nonatomic) id<DatePickerDelegate> delegate;
+
+@end
+
+@protocol DatePickerDelegate <NSObject>
+
+- (void)dateValueChanged:(NSDate *)date;
 
 @end

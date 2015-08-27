@@ -14,6 +14,14 @@
     // Initialization code
 }
 
+- (IBAction)dateValueChanged:(UIDatePicker *)sender
+{
+    NSDate *date = sender.date;
+    [self.delegate dateValueChanged:date];
+}
+
+
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

@@ -27,8 +27,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.goal = [[GoalController sharedInstance] createGoal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,29 +34,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)getSelectedDate:(UIDatePicker *)picker
-{
-    self.goalPickerCell.dateViewLabel = [UILabel new];
-    NSDateFormatter *dateGoalFormat = [[NSDateFormatter alloc] init];
-    
-    [dateGoalFormat setDateFormat:@"MMMM dd, yyyy"];
-    
-    NSString *getDate = [dateGoalFormat stringFromDate:picker.date];
-    
-    NSLog(@"date: %@", getDate);
-    
-    self.goalPickerCell.dateViewLabel.text = getDate;
-    
-    [GoalController sharedInstance].goalDate = picker.date;
-    
-    self.goal.goalDate = [GoalController sharedInstance].goalDate;
-    
-    NSLog(@"GoalDate: %@", self.goal.goalDate);
-    
-    [self.tableView reloadData];
-}
-
-- (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender
+- (IBAction)cancelButtonTapped:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -68,8 +44,6 @@
     [[GoalController sharedInstance] save];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 /*
 #pragma mark - Navigation

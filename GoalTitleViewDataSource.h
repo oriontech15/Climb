@@ -16,6 +16,7 @@
 #import "SaveChangesTableViewCell.h"
 #import "Goal.h"
 #import "AddSubGoalTableViewCell.h"
+#import "SubGoal.h"
 
 static NSInteger numberOfRows = 0;
 

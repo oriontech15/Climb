@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @protocol GoalTitleTableViewCellTextFieldDelegate;
+@protocol DatePickerViewUpdatedToViewDelegate;
 
 @interface AddHeaderGoalTableViewCell : UITableViewCell <UITextFieldDelegate>
 
 @property (weak, nonatomic) id<GoalTitleTableViewCellTextFieldDelegate> delegate;
+@property (weak, nonatomic) id<DatePickerViewUpdatedToViewDelegate> dateDelegate;
 @property (strong, nonatomic) IBOutlet UITextField *goalTitleTextField;
 
 @end
@@ -20,5 +22,11 @@
 @protocol GoalTitleTableViewCellTextFieldDelegate <NSObject>
 
 - (void)goalTitleTextFieldUpdated:(AddHeaderGoalTableViewCell *)goaltitleCell;
+
+@end
+
+@protocol DatePickerViewUpdatedToViewDelegate <NSObject>
+
+- (void)datePickerDidEndEditing:(NSDate *)date;
 
 @end

@@ -68,10 +68,13 @@
     
     else
     {
+        self.subGoal = [self.goal.subGoals objectAtIndex:indexPath.row - 3];
+        
         DetailViewSubGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewSubGoalCell"];
         
         cell.subGoalLabel.text = self.subGoal.subGoalTitle;
         
+        NSLog(@"INDEXPath: %ld", indexPath.row -3);
         NSLog(@"subgoal title: %@", self.subGoal.subGoalTitle);
         NSLog(@"subgoal cellText: %@", cell.subGoalLabel.text);
         
@@ -83,7 +86,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5 + self.goal.subGoals.count;
+    return 3 + self.goal.subGoals.count;
 }
 
 #pragma mark - TableView Delegate Methods
