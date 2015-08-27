@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Goal" representedClassName="Goal" syncable="YES">
+    <entity name="Goal" representedClassName="@protocol SubGoalTableViewCellDelegate &lt;NSObject&gt;  - (void)subGoalTextFieldUpdated:(SubGoalTableViewCell *)subGoalCell; - (void)subGoalButtonTapped:(SubGoalTableViewCell *)subGoalCell;  @end" syncable="YES">
         <attribute name="goalDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="goalDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="goalTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="subGoal" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="subGoals" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="SubGoal" inverseName="goal" inverseEntity="SubGoal" syncable="YES"/>
+    </entity>
+    <entity name="SubGoal" representedClassName="SubGoal" syncable="YES">
+        <attribute name="subGoalTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="subGoals" inverseEntity="Goal" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Goal" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Goal" positionX="-380" positionY="-132" width="128" height="105"/>
+        <element name="SubGoal" positionX="-54" positionY="18" width="128" height="75"/>
     </elements>
 </model>

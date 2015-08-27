@@ -9,14 +9,14 @@
 #import "AddGoalViewController.h"
 #import "AddHeaderGoalTableViewCell.h"
 #import "DatePickerTableViewCell.h"
+#import "DescriptionTableViewCell.h"
 #import "SubGoalTableViewCell.h"
 #import "GoalTitleViewDataSource.h"
 #import "GoalController.h"
 
 @interface AddGoalViewController ()
 
-@property (nonatomic) AddHeaderGoalTableViewCell *goalTitleCell;
-@property (nonatomic) DatePickerTableViewCell *goalPickerCell;
+@property (nonatomic, strong) DatePickerTableViewCell *goalPickerCell;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) GoalTitleViewDataSource *dataSource;
 
@@ -28,15 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.goalPickerCell = [DatePickerTableViewCell new];
-    self.dataSource = [GoalTitleViewDataSource new];
     [GoalController sharedInstance].cells = [NSMutableArray new];
     NSLog(@"array count: %ld", [GoalController sharedInstance].cells.count);
-}
-
-- (IBAction)headerGoalButtonTapped:(id)sender
-{
-    NSLog(@"TextField Text: %@", self.goalTitleCell.goalTitleTextField.text);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,10 +50,23 @@
     
     self.goalPickerCell.dateViewLabel.text = getDate;
     
-    NSLog(@"test: %@", self.goalPickerCell.dateViewLabel.text);
+    [[NSNotificationCenter defaultCenter] postNotificationName:DateUpdated object:nil];
     
     [self.tableView reloadData];
 }
+
+- (IBAction)cancelButtonTapped:(UIBarButtonItem *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)doneButtonTapped:(UIBarButtonItem *)sender
+{
+    [[GoalController sharedInstance] save];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 /*
 #pragma mark - Navigation

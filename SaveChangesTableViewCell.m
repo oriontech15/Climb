@@ -1,23 +1,22 @@
 //
-//  AddHeaderGoalTableViewCell.m
+//  DoneTableViewCell.m
 //  framedUP
 //
-//  Created by Justin Smith on 8/13/15.
+//  Created by Justin Smith on 8/18/15.
 //  Copyright (c) 2015 Justin Smith. All rights reserved.
 //
 
-#import "AddHeaderGoalTableViewCell.h"
+#import "SaveChangesTableViewCell.h"
 
-@implementation AddHeaderGoalTableViewCell
+@implementation SaveChangesTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
-    self.goalTitleTextField.delegate = self;
 }
 
--(void)textFieldDidEndEditing:(UITextField *)textField
+- (IBAction)saveChangesButtonTapped:(UIButton *)sender
 {
-    [self.delegate goalTitleTextFieldUpdated:self];
+    [self.delegate saveChangesButtonTappedToSaveChanges];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

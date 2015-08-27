@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1C6E3C1B8BC6DE00C9FE93 /* SubGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */; };
+		DB1C6E3F1B8BC6DE00C9FE93 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */; };
 		DB46B8A81B66E3D400A3811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8A71B66E3D400A3811A /* main.m */; };
 		DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AA1B66E3D400A3811A /* AppDelegate.m */; };
 		DB46B8AE1B66E3D400A3811A /* GoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AD1B66E3D400A3811A /* GoalViewController.m */; };
@@ -20,16 +22,19 @@
 		DB9DFF791B7D53B000411E0B /* AddHeaderGoalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB9DFF781B7D53B000411E0B /* AddHeaderGoalTableViewCell.m */; };
 		DBB2308C1B7AB00700D876B0 /* AddGoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2308B1B7AB00700D876B0 /* AddGoalViewController.m */; };
 		DBB2308F1B7AB05D00D876B0 /* GoalsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2308E1B7AB05D00D876B0 /* GoalsListViewController.m */; };
-		DBB230921B7AB0A900D876B0 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230911B7AB0A900D876B0 /* Goal.m */; };
-		DBB230951B7AB0B800D876B0 /* SubGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230941B7AB0B800D876B0 /* SubGoal.m */; };
 		DBB230981B7AB0D100D876B0 /* GoalController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230971B7AB0D100D876B0 /* GoalController.m */; };
 		DBB2309B1B7AB0F700D876B0 /* GoalsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309A1B7AB0F700D876B0 /* GoalsDetailViewController.m */; };
 		DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */; };
 		DBB230A31B7AB22E00D876B0 /* GoalTitleViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A21B7AB22E00D876B0 /* GoalTitleViewDataSource.m */; };
 		DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */; };
-		DBF1B5361B83A7A2006E4DD0 /* DoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B5351B83A7A2006E4DD0 /* DoneTableViewCell.m */; };
+		DBDD6F381B8E438B00E6B964 /* DetailViewTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F371B8E438B00E6B964 /* DetailViewTitleTableViewCell.m */; };
+		DBDD6F3B1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F3A1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m */; };
+		DBDD6F3E1B8E452F00E6B964 /* DetailViewDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F3D1B8E452F00E6B964 /* DetailViewDateTableViewCell.m */; };
+		DBDD6F411B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F401B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m */; };
+		DBF1B5361B83A7A2006E4DD0 /* SaveChangesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B5351B83A7A2006E4DD0 /* SaveChangesTableViewCell.m */; };
 		DBF1B5391B83AF82006E4DD0 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B5381B83AF82006E4DD0 /* Stack.m */; };
 		DBF1B53C1B83B07D006E4DD0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */; };
+		DBFF830E1B8CF751003577D7 /* AddSubGoalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFF830D1B8CF751003577D7 /* AddSubGoalTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB1C6E3A1B8BC6DE00C9FE93 /* SubGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubGoal.h; path = ../SubGoal.h; sourceTree = "<group>"; };
+		DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubGoal.m; path = ../SubGoal.m; sourceTree = "<group>"; };
+		DB1C6E3D1B8BC6DE00C9FE93 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Goal.h; path = ../Goal.h; sourceTree = "<group>"; };
+		DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Goal.m; path = ../Goal.m; sourceTree = "<group>"; };
 		DB46B8A21B66E3D400A3811A /* framedUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = framedUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46B8A61B66E3D400A3811A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB46B8A71B66E3D400A3811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,10 +77,6 @@
 		DBB2308B1B7AB00700D876B0 /* AddGoalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddGoalViewController.m; path = framedUP/AddGoalViewController.m; sourceTree = "<group>"; };
 		DBB2308D1B7AB05D00D876B0 /* GoalsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsListViewController.h; path = framedUP/GoalsListViewController.h; sourceTree = "<group>"; };
 		DBB2308E1B7AB05D00D876B0 /* GoalsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoalsListViewController.m; path = framedUP/GoalsListViewController.m; sourceTree = "<group>"; };
-		DBB230901B7AB0A900D876B0 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
-		DBB230911B7AB0A900D876B0 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
-		DBB230931B7AB0B800D876B0 /* SubGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGoal.h; sourceTree = "<group>"; };
-		DBB230941B7AB0B800D876B0 /* SubGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGoal.m; sourceTree = "<group>"; };
 		DBB230961B7AB0D100D876B0 /* GoalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalController.h; sourceTree = "<group>"; };
 		DBB230971B7AB0D100D876B0 /* GoalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalController.m; sourceTree = "<group>"; };
 		DBB230991B7AB0F700D876B0 /* GoalsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoalsDetailViewController.h; path = framedUP/GoalsDetailViewController.h; sourceTree = "<group>"; };
@@ -82,11 +87,21 @@
 		DBB230A21B7AB22E00D876B0 /* GoalTitleViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalTitleViewDataSource.m; sourceTree = "<group>"; };
 		DBB230A41B7AB24F00D876B0 /* GoalsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsListViewDataSource.h; sourceTree = "<group>"; };
 		DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListViewDataSource.m; sourceTree = "<group>"; };
-		DBF1B5341B83A7A2006E4DD0 /* DoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneTableViewCell.h; sourceTree = "<group>"; };
-		DBF1B5351B83A7A2006E4DD0 /* DoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneTableViewCell.m; sourceTree = "<group>"; };
+		DBDD6F361B8E438B00E6B964 /* DetailViewTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewTitleTableViewCell.h; sourceTree = "<group>"; };
+		DBDD6F371B8E438B00E6B964 /* DetailViewTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewTitleTableViewCell.m; sourceTree = "<group>"; };
+		DBDD6F391B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		DBDD6F3A1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		DBDD6F3C1B8E452F00E6B964 /* DetailViewDateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewDateTableViewCell.h; sourceTree = "<group>"; };
+		DBDD6F3D1B8E452F00E6B964 /* DetailViewDateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewDateTableViewCell.m; sourceTree = "<group>"; };
+		DBDD6F3F1B8E455500E6B964 /* DetailViewSubGoalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewSubGoalTableViewCell.h; sourceTree = "<group>"; };
+		DBDD6F401B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewSubGoalTableViewCell.m; sourceTree = "<group>"; };
+		DBF1B5341B83A7A2006E4DD0 /* SaveChangesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveChangesTableViewCell.h; sourceTree = "<group>"; };
+		DBF1B5351B83A7A2006E4DD0 /* SaveChangesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveChangesTableViewCell.m; sourceTree = "<group>"; };
 		DBF1B5371B83AF82006E4DD0 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		DBF1B5381B83AF82006E4DD0 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		DBFF830C1B8CF751003577D7 /* AddSubGoalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSubGoalTableViewCell.h; sourceTree = "<group>"; };
+		DBFF830D1B8CF751003577D7 /* AddSubGoalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSubGoalTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +125,7 @@
 		DB46B8991B66E3D400A3811A = {
 			isa = PBXGroup;
 			children = (
+				DBDD6F421B8E457000E6B964 /* DetailViewCells */,
 				DB78EF6A1B825C2B00F9262E /* AddViewCells */,
 				DBB230A01B7AB20900D876B0 /* DataSources */,
 				DBB2309C1B7AB10E00D876B0 /* Views */,
@@ -133,11 +149,11 @@
 			children = (
 				DB46B8A91B66E3D400A3811A /* AppDelegate.h */,
 				DB46B8AA1B66E3D400A3811A /* AppDelegate.m */,
-				DBB230901B7AB0A900D876B0 /* Goal.h */,
-				DBB230911B7AB0A900D876B0 /* Goal.m */,
+				DB1C6E3D1B8BC6DE00C9FE93 /* Goal.h */,
+				DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */,
+				DB1C6E3A1B8BC6DE00C9FE93 /* SubGoal.h */,
+				DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */,
 				DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */,
-				DBB230931B7AB0B800D876B0 /* SubGoal.h */,
-				DBB230941B7AB0B800D876B0 /* SubGoal.m */,
 				DBB230961B7AB0D100D876B0 /* GoalController.h */,
 				DBB230971B7AB0D100D876B0 /* GoalController.m */,
 				DBF1B5371B83AF82006E4DD0 /* Stack.h */,
@@ -187,8 +203,10 @@
 				DB78EF651B825AF200F9262E /* DatePickerTableViewCell.m */,
 				DB78EF671B825B0D00F9262E /* SubGoalTableViewCell.h */,
 				DB78EF681B825B0D00F9262E /* SubGoalTableViewCell.m */,
-				DBF1B5341B83A7A2006E4DD0 /* DoneTableViewCell.h */,
-				DBF1B5351B83A7A2006E4DD0 /* DoneTableViewCell.m */,
+				DBFF830C1B8CF751003577D7 /* AddSubGoalTableViewCell.h */,
+				DBFF830D1B8CF751003577D7 /* AddSubGoalTableViewCell.m */,
+				DBF1B5341B83A7A2006E4DD0 /* SaveChangesTableViewCell.h */,
+				DBF1B5351B83A7A2006E4DD0 /* SaveChangesTableViewCell.m */,
 			);
 			name = AddViewCells;
 			sourceTree = "<group>";
@@ -219,6 +237,21 @@
 				DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */,
 			);
 			name = DataSources;
+			sourceTree = "<group>";
+		};
+		DBDD6F421B8E457000E6B964 /* DetailViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DBDD6F361B8E438B00E6B964 /* DetailViewTitleTableViewCell.h */,
+				DBDD6F371B8E438B00E6B964 /* DetailViewTitleTableViewCell.m */,
+				DBDD6F391B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.h */,
+				DBDD6F3A1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m */,
+				DBDD6F3C1B8E452F00E6B964 /* DetailViewDateTableViewCell.h */,
+				DBDD6F3D1B8E452F00E6B964 /* DetailViewDateTableViewCell.m */,
+				DBDD6F3F1B8E455500E6B964 /* DetailViewSubGoalTableViewCell.h */,
+				DBDD6F401B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m */,
+			);
+			name = DetailViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,25 +354,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB1C6E3F1B8BC6DE00C9FE93 /* Goal.m in Sources */,
 				DBF1B5391B83AF82006E4DD0 /* Stack.m in Sources */,
+				DBDD6F411B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m in Sources */,
 				DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */,
 				DB78EF691B825B0D00F9262E /* SubGoalTableViewCell.m in Sources */,
 				DBB2309B1B7AB0F700D876B0 /* GoalsDetailViewController.m in Sources */,
-				DBB230921B7AB0A900D876B0 /* Goal.m in Sources */,
 				DB46B8AE1B66E3D400A3811A /* GoalViewController.m in Sources */,
 				DB78EF631B825AD800F9262E /* DescriptionTableViewCell.m in Sources */,
 				DBB230981B7AB0D100D876B0 /* GoalController.m in Sources */,
 				DB9DFF791B7D53B000411E0B /* AddHeaderGoalTableViewCell.m in Sources */,
+				DBFF830E1B8CF751003577D7 /* AddSubGoalTableViewCell.m in Sources */,
 				DBB2308F1B7AB05D00D876B0 /* GoalsListViewController.m in Sources */,
 				DBB2308C1B7AB00700D876B0 /* AddGoalViewController.m in Sources */,
 				DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */,
 				DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */,
-				DBB230951B7AB0B800D876B0 /* SubGoal.m in Sources */,
 				DB46B8A81B66E3D400A3811A /* main.m in Sources */,
+				DB1C6E3C1B8BC6DE00C9FE93 /* SubGoal.m in Sources */,
 				DB78EF661B825AF200F9262E /* DatePickerTableViewCell.m in Sources */,
-				DBF1B5361B83A7A2006E4DD0 /* DoneTableViewCell.m in Sources */,
+				DBF1B5361B83A7A2006E4DD0 /* SaveChangesTableViewCell.m in Sources */,
+				DBDD6F3B1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m in Sources */,
 				DBF1B53C1B83B07D006E4DD0 /* Model.xcdatamodeld in Sources */,
+				DBDD6F3E1B8E452F00E6B964 /* DetailViewDateTableViewCell.m in Sources */,
 				DBB230A31B7AB22E00D876B0 /* GoalTitleViewDataSource.m in Sources */,
+				DBDD6F381B8E438B00E6B964 /* DetailViewTitleTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,10 +13,15 @@
 #import "DatePickerTableViewCell.h"
 #import "SubGoalTableViewCell.h"
 #import "DescriptionTableViewCell.h"
-#import "DoneTableViewCell.h"
+#import "SaveChangesTableViewCell.h"
+#import "Goal.h"
+#import "AddSubGoalTableViewCell.h"
 
 static NSInteger numberOfRows = 0;
 
 @interface GoalTitleViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) Goal *goal;
+@property (nonatomic, strong) SubGoal *subGoal;
 
 @end

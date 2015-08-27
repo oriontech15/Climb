@@ -14,6 +14,11 @@
     // Initialization code
 }
 
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    [self.delegate descriptionTextViewUpdated:self];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

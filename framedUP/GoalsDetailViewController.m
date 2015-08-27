@@ -7,8 +7,12 @@
 //
 
 #import "GoalsDetailViewController.h"
+#import "DetailViewControllerDataSource.h"
 
 @interface GoalsDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet DetailViewControllerDataSource *dataSource;
 
 @end
 
@@ -17,12 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.dataSource.goal = self.goal;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)dismissButtonTapped:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 /*
 #pragma mark - Navigation

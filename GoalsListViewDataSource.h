@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
+#import "Goal.h"
 
 @interface GoalsListViewDataSource : NSObject <UITableViewDataSource>
+
+@property (nonatomic, strong) Goal *goal;
 
 @end

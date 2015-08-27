@@ -1,22 +1,17 @@
 //
-//  SubGoalTableViewCell.m
+//  DetailViewDateTableViewCell.m
 //  framedUP
 //
-//  Created by Justin Smith on 8/17/15.
+//  Created by Justin Smith on 8/26/15.
 //  Copyright (c) 2015 Justin Smith. All rights reserved.
 //
 
-#import "SubGoalTableViewCell.h"
+#import "DetailViewDateTableViewCell.h"
 
-@implementation SubGoalTableViewCell
+@implementation DetailViewDateTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
-}
-
--(void)textFieldDidEndEditing:(UITextField *)textField
-{
-    [self.delegate subGoalTextFieldUpdated:self];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

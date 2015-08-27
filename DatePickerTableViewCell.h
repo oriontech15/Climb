@@ -10,7 +10,9 @@
 
 @interface DatePickerTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIDatePicker *goalDatePicker;
+@property (strong, nonatomic) IBOutlet UIDatePicker *goalDatePicker;
 @property (strong, nonatomic) IBOutlet UILabel *dateViewLabel;
+
++(NSDate *)dateFromDatePickerUpdated;
 
 @end

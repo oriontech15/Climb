@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DescriptionTableViewCell : UITableViewCell
+@protocol DescriptionTableViewCellDelegate;
 
-@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@interface DescriptionTableViewCell : UITableViewCell <UITextViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (strong, nonatomic) id<DescriptionTableViewCellDelegate> delegate;
+
+@end
+
+@protocol DescriptionTableViewCellDelegate <NSObject>
+
+-(void)descriptionTextViewUpdated:(DescriptionTableViewCell *)descriptionCell;
 
 @end

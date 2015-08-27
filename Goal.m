@@ -2,17 +2,19 @@
 //  Goal.m
 //  framedUP
 //
-//  Created by Justin Smith on 8/11/15.
+//  Created by Justin Smith on 8/24/15.
 //  Copyright (c) 2015 Justin Smith. All rights reserved.
 //
 
 #import "Goal.h"
+#import "SubGoal.h"
+
 
 @implementation Goal
 
-@dynamic subGoal;
+@dynamic goalDate;
 @dynamic goalDescription;
 @dynamic goalTitle;
-@dynamic goalDate;
+@dynamic subGoals;
 
 @end

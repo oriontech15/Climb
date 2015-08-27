@@ -9,6 +9,12 @@
 #import "GoalController.h"
 #import "Stack.h"
 
+@interface GoalController ()
+
+@property (nonatomic, strong) NSArray *goals;
+
+@end
+
 @implementation GoalController
 
 +(GoalController *)sharedInstance
@@ -29,20 +35,43 @@
     return goal;
 }
 
--(NSArray *)entries
+-(SubGoal *)createSubGoal
+{
+    SubGoal *subGoal = [NSEntityDescription insertNewObjectForEntityForName:@"SubGoal" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
+    
+    return subGoal;
+}
+
+-(NSArray *)goals
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Goal"];
     
     NSError *error;
     
-    NSArray *allEntries = [[Stack sharedInstance].managedObjectContext executeFetchRequest:request error:&error];
+    NSArray *allGoals = [[Stack sharedInstance].managedObjectContext executeFetchRequest:request error:&error];
     
     if (error)
     {
         NSLog(@"Error %@", error.localizedDescription);
     }
     
-    return allEntries;
+    return allGoals;
+}
+
+-(NSArray *)subGoals
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"SubGoal"];
+    
+    NSError *error;
+    
+    NSArray *allSubGoals = [[Stack sharedInstance].managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (error)
+    {
+        NSLog(@"Error %@", error.localizedDescription);
+    }
+    
+    return allSubGoals;
 }
 
 //Remove an entry if called and not empty

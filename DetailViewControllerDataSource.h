@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "UIKit/UIKit.h"
+#import "DetailViewTitleTableViewCell.h"
+#import "DetailViewSubGoalTableViewCell.h"
+#import "DetailViewDescriptionTableViewCell.h"
+#import "DetailViewDateTableViewCell.h"
+#import "Goal.h"
+#import "SubGoal.h"
 
-@interface DetailViewControllerDataSource : NSObject <UITableViewDataSource>
+@interface DetailViewControllerDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) Goal *goal;
+@property (nonatomic, strong) SubGoal *subGoal;
 
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goal.h"
 
 @interface GoalsDetailViewController : UIViewController
+
+@property (nonatomic, strong) Goal *goal;
 
 @end

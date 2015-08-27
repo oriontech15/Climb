@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SubGoalTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIButton *subGoalAddButton;
-@property (weak, nonatomic) IBOutlet UITextField *subGoalTextField;
+@protocol SubGoalTableViewCellDelegate;
+
+@interface SubGoalTableViewCell : UITableViewCell <UITextFieldDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *subGoalTextField;
+@property (strong, nonatomic) id<SubGoalTableViewCellDelegate> delegate;
+
+@end
+
+@protocol SubGoalTableViewCellDelegate <NSObject>
+
+- (void)subGoalTextFieldUpdated:(SubGoalTableViewCell *)subGoalCell;
 
 @end

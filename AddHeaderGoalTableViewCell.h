@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddHeaderGoalTableViewCell : UITableViewCell
+@protocol GoalTitleTableViewCellTextFieldDelegate;
 
-@property (weak, nonatomic) IBOutlet UITextField *goalTitleTextField;
+@interface AddHeaderGoalTableViewCell : UITableViewCell <UITextFieldDelegate>
+
+@property (weak, nonatomic) id<GoalTitleTableViewCellTextFieldDelegate> delegate;
+@property (strong, nonatomic) IBOutlet UITextField *goalTitleTextField;
+
+@end
+
+@protocol GoalTitleTableViewCellTextFieldDelegate <NSObject>
+
+- (void)goalTitleTextFieldUpdated:(AddHeaderGoalTableViewCell *)goaltitleCell;
 
 @end

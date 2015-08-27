@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "Goal.h"
 
+static NSString *DateUpdated = @"DateUpdated";
+
 @interface GoalController : NSObject
 
 @property (nonatomic) NSMutableArray *cells;
+@property (nonatomic, strong, readonly) NSArray *goals;
 
 +(GoalController *)sharedInstance;
 
 - (void)removeGoal:(Goal *)goal;
 - (Goal *)createGoal;
+- (SubGoal *)createSubGoal;
 - (void)save;
 
 @end
