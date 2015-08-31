@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DateTimer.h"
 
 @interface AppDelegate ()
 
@@ -36,6 +37,29 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound categories:nil]];
+    }
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIAlertController *timerIsDoneAlert = [UIAlertController alertControllerWithTitle:@"Today is the day!!" message:@"The end date for your goal is today" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [timerIsDoneAlert addAction:[UIAlertAction actionWithTitle:@"I accomplished it!!"
+                                                         style:UIAlertActionStyleDestructive
+                                                       handler:nil]];
+    
+    [timerIsDoneAlert addAction:[UIAlertAction actionWithTitle:@"Need more time."
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction *action)
+                                 {
+                                     [[DateTimer sharedInstance] startTimer];
+                                 }]];
+    
+    [self.window.rootViewController presentViewController:timerIsDoneAlert animated:YES completion:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

@@ -20,9 +20,18 @@
 
 static NSInteger numberOfRows = 0;
 
+@protocol DisMissViewControllerDelegate;
+
 @interface GoalTitleViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) Goal *goal;
 @property (nonatomic, strong) SubGoal *subGoal;
+@property (weak, nonatomic) id<DisMissViewControllerDelegate> dismissViewDelegate;
+
+@end
+
+@protocol DisMissViewControllerDelegate <NSObject>
+
+- (void)dismissViewControllerUponSaveButtonTap;
 
 @end

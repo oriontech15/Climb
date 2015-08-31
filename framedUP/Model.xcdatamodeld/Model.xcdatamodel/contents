@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Goal" representedClassName="@protocol SubGoalTableViewCellDelegate &lt;NSObject&gt;  - (void)subGoalTextFieldUpdated:(SubGoalTableViewCell *)subGoalCell; - (void)subGoalButtonTapped:(SubGoalTableViewCell *)subGoalCell;  @end" syncable="YES">
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="goalDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="goalDescription" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="goalTitle" optional="YES" attributeType="String" syncable="YES"/>

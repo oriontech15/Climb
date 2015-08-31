@@ -39,6 +39,7 @@
 {
     SubGoal *subGoal = [NSEntityDescription insertNewObjectForEntityForName:@"SubGoal" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
     
+    
     return subGoal;
 }
 
@@ -78,6 +79,11 @@
 -(void)removeGoal:(Goal *)goal
 {
     [goal.managedObjectContext deleteObject:goal];
+}
+
+-(void)removeSubGoalFromGoal:(SubGoal *)subGoal
+{
+    [subGoal.managedObjectContext deleteObject:subGoal];
 }
 
 //Save the existing entries by calling the saveToPersistentStorage method

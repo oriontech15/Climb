@@ -27,20 +27,22 @@
     {
         AddHeaderGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"goalTitleCell"];
         
+        cell.goalTitleTextField.text = self.goal.goalTitle;
+        
         cell.delegate = self;
         
-        [[GoalController sharedInstance].cells addObject:cell];
-
         return cell;
     }
     
     if (indexPath.row == 1)
     {
+        
         DescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"descriptionCell"];
         
+        if (self.goal) {
+            cell.descriptionTextView.text = self.goal.goalDescription;
+        }
         cell.delegate = self;
-        
-        [[GoalController sharedInstance].cells addObject:cell];
 
         return cell;
     }
@@ -50,8 +52,6 @@
         AddSubGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addSubGoalCell"];
         
         cell.delegate = self;
-        
-        [[GoalController sharedInstance].cells addObject:cell];
 
         return cell;
     }
@@ -66,11 +66,18 @@
         
         [dateGoalFormat setDateFormat:@"MMMM dd, yyyy"];
         
+        if (!self.goal.goalDate) {
+            cell.goalDatePicker.date = [NSDate date];
+        }
+        
+        else
+        {
+            cell.goalDatePicker.date = self.goal.goalDate;
+        }
+        
         NSString *getDate = [dateGoalFormat stringFromDate:cell.goalDatePicker.date];
         
         cell.dateViewLabel.text = getDate;
-        
-        [[GoalController sharedInstance].cells addObject:cell];
 
         return cell;
     }
@@ -88,9 +95,9 @@
     {
         SubGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subGoalCell"];
         
-        cell.delegate = self;
+        cell.subGoalTextField.text = ((SubGoal *)[self.goal.subGoals objectAtIndex:indexPath.row - 2 ]).subGoalTitle;
         
-        [[GoalController sharedInstance].cells addObject:cell];
+        cell.delegate = self;
         
         return cell;
     }
@@ -153,7 +160,6 @@
     {
         self.goal = [[GoalController sharedInstance] createGoal];
     }
-    
     self.goal.goalTitle = goaltitleCell.goalTitleTextField.text;
     
     NSLog(@"goaltitle: %@", self.goal.goalTitle);
@@ -174,11 +180,6 @@
 //Implements the delegate method for the descriptionCell
 -(void)descriptionTextViewUpdated:(DescriptionTableViewCell *)descriptionCell
 {
-    if (!self.goal)
-    {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
-    
     self.goal.goalDescription = descriptionCell.descriptionTextView.text;
     
     NSLog(@"Description: %@", self.goal.goalDescription);
@@ -192,8 +193,6 @@
     
     SubGoal *newSubgoal = [[GoalController sharedInstance] createSubGoal];
     newSubgoal.goal = self.goal;
-    
-    
     
     [self.tableView reloadData];
 }
@@ -214,31 +213,40 @@
         self.goal = [[GoalController sharedInstance] createGoal];
     }
     
-    NSLog(@"TITLE: %@", self.goal.goalTitle);
-    NSLog(@"DESCRIPTION: %@", self.goal.description);
-    NSLog(@"SUBGOAL: %@", self.subGoal.subGoalTitle);
-    NSLog(@"SUBGOAL DESCRIPTIONS: %@", self.goal.subGoals[0]);
-    NSLog(@"SUBGOAL DESCRIPTIONS: %@", self.goal.subGoals[1]);
+    [self.dismissViewDelegate dismissViewControllerUponSaveButtonTap];
     
     [[GoalController sharedInstance] save];
 }
 
 #pragma mark - Editing The TableView
 
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSInteger numberOfCells = 5 + self.goal.subGoals.count;
+    if (indexPath.row > 1 && indexPath.row < numberOfCells - 3)
+    {
+        return YES;
+    }
+    
+    else
+    {
+        return NO;
+    }
+}
+
 //Delete SubGoal Cells
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (editingStyle == UITableViewCellEditingStyleDelete)
-//    {
-//        if (indexPath.row == self.goal.subGoals.count)
-//        //add code here for when you hit delete
-//        
-//        //1. update the model
-//        SubGoal *subGoal = [GoalController sharedInstance].cells[indexPath.row];
-//        [[GoalController sharedInstance] removeSubGoal:subGoal];
-//        [[GoalController sharedInstance] save];
-//        //2. reload the tableview or call one of the deleteRow methods
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//    }
-//}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSLog(@"%ld", indexPath.row);
+        SubGoal *subGoal = self.goal.subGoals[indexPath.row - 2];
+        [[GoalController sharedInstance] removeSubGoalFromGoal:subGoal];
+        [[GoalController sharedInstance] save];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    
+}
 
 @end

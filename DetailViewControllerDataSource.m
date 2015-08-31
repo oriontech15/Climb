@@ -58,6 +58,7 @@
     {
         DetailViewDescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewDescriptionCell"];
         
+        cell.descriptionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
         cell.descriptionTextView.text = self.goal.goalDescription;
         
         NSLog(@"description text: %@", self.goal.goalDescription);

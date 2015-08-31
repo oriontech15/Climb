@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Goal.h"
 #import "DatePickerTableViewCell.h"
+#import "SubGoal.h"
 
 static NSString *DateUpdated = @"DateUpdated";
 
@@ -21,8 +22,12 @@ static NSString *DateUpdated = @"DateUpdated";
 +(GoalController *)sharedInstance;
 
 - (void)removeGoal:(Goal *)goal;
+-(void)removeSubGoalFromGoal:(SubGoal *)subGoal;
+
 - (Goal *)createGoal;
 - (SubGoal *)createSubGoal;
+
 - (void)save;
+
 
 @end

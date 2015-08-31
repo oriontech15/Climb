@@ -14,9 +14,12 @@
 #import "GoalTitleViewDataSource.h"
 #import "GoalController.h"
 
-@interface AddGoalViewController ()
+@interface AddGoalViewController () <DisMissViewControllerDelegate>
 
 @property (nonatomic, strong) DatePickerTableViewCell *goalPickerCell;
+@property (nonatomic, strong) SubGoalTableViewCell *subGoalCell;
+@property (nonatomic, strong) AddHeaderGoalTableViewCell *goalTitleCell;
+@property (nonatomic, strong) DescriptionTableViewCell *descriptionCell;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) GoalTitleViewDataSource *dataSource;
 
@@ -29,6 +32,20 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    ((GoalTitleViewDataSource *) self.tableView.dataSource).dismissViewDelegate = self;
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[GoalController sharedInstance] save];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -36,10 +53,11 @@
 
 - (IBAction)cancelButtonTapped:(id)sender
 {
+    [self.goal.managedObjectContext undo];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)doneButtonTapped:(UIBarButtonItem *)sender
+-(void)dismissViewControllerUponSaveButtonTap
 {
     [[GoalController sharedInstance] save];
     [self dismissViewControllerAnimated:YES completion:nil];

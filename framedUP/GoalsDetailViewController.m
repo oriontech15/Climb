@@ -8,6 +8,7 @@
 
 #import "GoalsDetailViewController.h"
 #import "DetailViewControllerDataSource.h"
+#import "AddGoalViewController.h"
 
 @interface GoalsDetailViewController ()
 
@@ -22,7 +23,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     self.dataSource.goal = self.goal;
+
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,15 +43,26 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-/*
 #pragma mark - Navigation
+
+- (IBAction)unwindToGoalDetailView:(UIStoryboardSegue *)segue
+{
+    AddGoalViewController *sourceVC = segue.sourceViewController;
+    
+    self.goal = sourceVC.goal;
+    [self.tableView reloadData];
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"editButton"])
+    {
+        UINavigationController *navController = segue.destinationViewController;
+        AddGoalViewController *editVC = ((AddGoalViewController *)navController.topViewController);
+        
+        editVC.goal = self.goal;
+    }
 }
-*/
+
 
 @end

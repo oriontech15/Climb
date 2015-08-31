@@ -16,6 +16,7 @@
 
 -(void)textViewDidEndEditing:(UITextView *)textView
 {
+    [self resignFirstResponder];
     [self.delegate descriptionTextViewUpdated:self];
 }
 
