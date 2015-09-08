@@ -10,7 +10,7 @@
 #import "UIKit/UIKit.h"
 #import "Goal.h"
 
-@interface GoalsListViewDataSource : NSObject <UITableViewDataSource>
+@interface GoalsListViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) Goal *goal;
 

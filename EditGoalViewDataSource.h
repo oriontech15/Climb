@@ -22,7 +22,7 @@ static NSInteger numberOfRows = 0;
 
 @protocol DisMissViewControllerDelegate;
 
-@interface GoalTitleViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface EditGoalViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) Goal *goal;
 @property (nonatomic, strong) SubGoal *subGoal;

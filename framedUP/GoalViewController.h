@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goal.h"
 
 @interface GoalViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) Goal *goal;
 
 @end
 

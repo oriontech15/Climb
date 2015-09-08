@@ -60,6 +60,7 @@
         
         cell.descriptionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
         cell.descriptionTextView.text = self.goal.goalDescription;
+        cell.descriptionTextView.textColor = [UIColor whiteColor];
         
         NSLog(@"description text: %@", self.goal.goalDescription);
         NSLog(@"description cellText: %@", cell.descriptionTextView.text);

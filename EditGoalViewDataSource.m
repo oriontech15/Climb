@@ -6,23 +6,25 @@
 //  Copyright (c) 2015 Justin Smith. All rights reserved.
 //
 
-#import "GoalTitleViewDataSource.h"
+#import "EditGoalViewDataSource.h"
 #import "GoalController.h"
 
-@interface GoalTitleViewDataSource () <GoalTitleTableViewCellTextFieldDelegate, SubGoalTableViewCellDelegate, DescriptionTableViewCellDelegate, addSubGoalTableViewCellDelegate, saveChangesButtonTableViewCellDelegate, DatePickerDelegate>
+@interface EditGoalViewDataSource () <GoalTitleTableViewCellTextFieldDelegate, SubGoalTableViewCellDelegate, DescriptionTableViewCellDelegate, addSubGoalTableViewCellDelegate, saveChangesButtonTableViewCellDelegate, DatePickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSDate *date;
 
 @end
 
-@implementation GoalTitleViewDataSource
+@implementation EditGoalViewDataSource
 
 #pragma mark - TableView DataSource Methods
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    if (!self.goal) {
+        self.goal = [[GoalController sharedInstance] createGoal];
+    }
     if (indexPath.row == 0)
     {
         AddHeaderGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"goalTitleCell"];
@@ -43,6 +45,8 @@
             cell.descriptionTextView.text = self.goal.goalDescription;
         }
         cell.delegate = self;
+        
+        cell.descriptionTextView.textColor = [UIColor whiteColor];
 
         return cell;
     }
@@ -156,10 +160,6 @@
 //Implements the delegate method for the goalTitleCell
 - (void)goalTitleTextFieldUpdated:(AddHeaderGoalTableViewCell *)goaltitleCell
 {
-    if (!self.goal)
-    {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
     self.goal.goalTitle = goaltitleCell.goalTitleTextField.text;
     
     NSLog(@"goaltitle: %@", self.goal.goalTitle);
@@ -187,10 +187,6 @@
 
 -(void)addSubGoalCellToTableView
 {
-    if (!self.goal) {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
-    
     SubGoal *newSubgoal = [[GoalController sharedInstance] createSubGoal];
     newSubgoal.goal = self.goal;
     
@@ -208,11 +204,6 @@
 
 -(void)saveChangesButtonTappedToSaveChanges
 {
-    if (!self.goal)
-    {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
-    
     [self.dismissViewDelegate dismissViewControllerUponSaveButtonTap];
     
     [[GoalController sharedInstance] save];

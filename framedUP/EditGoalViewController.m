@@ -6,44 +6,49 @@
 //  Copyright (c) 2015 Justin Smith. All rights reserved.
 //
 
-#import "AddGoalViewController.h"
+#import "EditGoalViewController.h"
 #import "AddHeaderGoalTableViewCell.h"
 #import "DatePickerTableViewCell.h"
 #import "DescriptionTableViewCell.h"
 #import "SubGoalTableViewCell.h"
-#import "GoalTitleViewDataSource.h"
+#import "EditGoalViewDataSource.h"
 #import "GoalController.h"
 
-@interface AddGoalViewController () <DisMissViewControllerDelegate>
+@interface EditGoalViewController () <DisMissViewControllerDelegate>
 
 @property (nonatomic, strong) DatePickerTableViewCell *goalPickerCell;
 @property (nonatomic, strong) SubGoalTableViewCell *subGoalCell;
 @property (nonatomic, strong) AddHeaderGoalTableViewCell *goalTitleCell;
 @property (nonatomic, strong) DescriptionTableViewCell *descriptionCell;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) GoalTitleViewDataSource *dataSource;
+@property (strong, nonatomic) IBOutlet EditGoalViewDataSource *dataSource;
 
 @end
 
-@implementation AddGoalViewController
+@implementation EditGoalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.dataSource.goal = self.goal;
+    [self.tableView reloadData];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     
-    ((GoalTitleViewDataSource *) self.tableView.dataSource).dismissViewDelegate = self;
+    if ([self.goal isEqual:nil]) {
+        self.goal = [[GoalController sharedInstance] createGoal];
+    }
+    
+    ((EditGoalViewDataSource *) self.tableView.dataSource).dismissViewDelegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
-    [[GoalController sharedInstance] save];
 }
 
 - (void)didReceiveMemoryWarning {

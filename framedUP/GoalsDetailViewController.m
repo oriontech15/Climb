@@ -8,7 +8,7 @@
 
 #import "GoalsDetailViewController.h"
 #import "DetailViewControllerDataSource.h"
-#import "AddGoalViewController.h"
+#import "EditGoalViewController.h"
 
 @interface GoalsDetailViewController ()
 
@@ -45,20 +45,12 @@
 
 #pragma mark - Navigation
 
-- (IBAction)unwindToGoalDetailView:(UIStoryboardSegue *)segue
-{
-    AddGoalViewController *sourceVC = segue.sourceViewController;
-    
-    self.goal = sourceVC.goal;
-    [self.tableView reloadData];
-}
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"editButton"])
     {
         UINavigationController *navController = segue.destinationViewController;
-        AddGoalViewController *editVC = ((AddGoalViewController *)navController.topViewController);
+        EditGoalViewController *editVC = ((EditGoalViewController *)navController.topViewController);
         
         editVC.goal = self.goal;
     }

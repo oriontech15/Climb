@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Goal.h"
-@interface AddGoalViewController : UIViewController 
+@interface EditGoalViewController : UIViewController 
 
 @property (nonatomic, strong) Goal *goal;
 
