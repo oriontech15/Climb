@@ -22,9 +22,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (!self.goal) {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
+    
     if (indexPath.row == 0)
     {
         AddHeaderGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"goalTitleCell"];
@@ -46,7 +44,7 @@
         }
         cell.delegate = self;
         
-        cell.descriptionTextView.textColor = [UIColor whiteColor];
+        cell.descriptionTextView.textColor = [UIColor blackColor];
 
         return cell;
     }
@@ -163,7 +161,6 @@
     self.goal.goalTitle = goaltitleCell.goalTitleTextField.text;
     
     NSLog(@"goaltitle: %@", self.goal.goalTitle);
-
 }
 
 //Implements the delegate method for the subGoalCell

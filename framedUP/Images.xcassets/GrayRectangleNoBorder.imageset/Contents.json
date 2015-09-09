@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "GrayRectangleNoBorder.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "GrayRectangleNoBorder@2x.pdf"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "GrayRectangleNoBorder@3x.pdf"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

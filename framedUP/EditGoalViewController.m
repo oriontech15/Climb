@@ -31,6 +31,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationController.navigationBar.backgroundColor = [UIColor darkGrayColor];
+    
+    if (!self.goal) {
+        self.goal = [[GoalController sharedInstance] createGoal];
+    }
+    
     self.dataSource.goal = self.goal;
     [self.tableView reloadData];
 }
@@ -39,16 +45,12 @@
 {
     [super viewWillAppear:YES];
     
-    if ([self.goal isEqual:nil]) {
-        self.goal = [[GoalController sharedInstance] createGoal];
-    }
-    
     ((EditGoalViewDataSource *) self.tableView.dataSource).dismissViewDelegate = self;
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
-    [super viewWillDisappear:animated];
+    [super viewWillDisappear:animated];    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,11 +61,14 @@
 - (IBAction)cancelButtonTapped:(id)sender
 {
     [self.goal.managedObjectContext undo];
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)dismissViewControllerUponSaveButtonTap
 {
+    [self.view endEditing:YES];
     [[GoalController sharedInstance] save];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

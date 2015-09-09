@@ -34,7 +34,8 @@
         NSLog(@"goalTitle: %@", self.goal.goalTitle);
         
         cell.textLabel.text = self.goal.goalTitle;
-        
+        cell.textLabel.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
+
         NSDateFormatter *dateGoalFormat = [[NSDateFormatter alloc] init];
         
         [dateGoalFormat setDateFormat:@"MMMM dd, yyyy"];
@@ -42,12 +43,15 @@
         NSString *getDate = [dateGoalFormat stringFromDate:self.goal.goalDate];
 
         cell.detailTextLabel.text = getDate;
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
+
         
     }
     
     else
     {
         cell.textLabel.text = @"NO TITLE";
+        cell.textLabel.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
         
         self.goal.goalDate = self.datePickerCell.goalDatePicker.date;
         
@@ -58,6 +62,7 @@
         NSString *getDate = [dateGoalFormat stringFromDate:self.goal.goalDate];
         
         cell.detailTextLabel.text = getDate;
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
     }
 
     return cell;

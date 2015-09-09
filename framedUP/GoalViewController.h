@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Goal.h"
+#import "GoalCollectionViewCell.h"
 
-@interface GoalViewController : UIViewController
+@interface GoalViewController : UIViewController <GoalCollectionViewCellDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) Goal *goal;
 
 @end

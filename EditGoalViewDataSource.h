@@ -24,7 +24,7 @@ static NSInteger numberOfRows = 0;
 
 @interface EditGoalViewDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) Goal *goal;
+@property (nonatomic, weak) Goal *goal;
 @property (nonatomic, strong) SubGoal *subGoal;
 @property (weak, nonatomic) id<DisMissViewControllerDelegate> dismissViewDelegate;
 

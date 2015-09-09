@@ -54,7 +54,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return collectionView.superview.frame.size;
+    return collectionView.superview.bounds.size;
 }
 
 @end

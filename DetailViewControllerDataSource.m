@@ -26,9 +26,6 @@
         
         cell.titleLabel.text = self.goal.goalTitle;
         
-        NSLog(@"title title: %@", self.goal.goalTitle);
-        NSLog(@"title cellText: %@", cell.titleLabel.text);
-        
         //cell.delegate = self;
         
         return cell;
@@ -46,11 +43,6 @@
         
         cell.dateLabel.text = getDate;
         
-        NSLog(@"GoalDate: %@", self.goal.goalDate);
-        
-        NSLog(@"date: %@", getDate);
-        NSLog(@"date cellText: %@", cell.dateLabel.text);
-        
         return cell;
     }
     
@@ -58,12 +50,17 @@
     {
         DetailViewDescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewDescriptionCell"];
         
+        cell.descriptionTextView.textAlignment = NSTextAlignmentCenter;
         cell.descriptionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
         cell.descriptionTextView.text = self.goal.goalDescription;
-        cell.descriptionTextView.textColor = [UIColor whiteColor];
+        cell.descriptionTextView.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
         
-        NSLog(@"description text: %@", self.goal.goalDescription);
-        NSLog(@"description cellText: %@", cell.descriptionTextView.text);
+        return cell;
+    }
+    
+    if (indexPath.row == 3)
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"permenantSubGoalTitle"];
         
         return cell;
     }
@@ -74,11 +71,8 @@
         
         DetailViewSubGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewSubGoalCell"];
         
-        cell.subGoalLabel.text = self.subGoal.subGoalTitle;
         
-        NSLog(@"INDEXPath: %ld", indexPath.row -3);
-        NSLog(@"subgoal title: %@", self.subGoal.subGoalTitle);
-        NSLog(@"subgoal cellText: %@", cell.subGoalLabel.text);
+        cell.subGoalLabel.text = self.subGoal.subGoalTitle;
         
         //cell.delegate = self;
         
@@ -95,33 +89,30 @@
 
 - (CGFloat)tableView:(UITableView *)aTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSInteger numberOfCells = 3 + self.goal.subGoals.count;
-    
     //title Row
     if (indexPath.row == 0)
     {
         return 55.0;
     }
     
-    //Description Row
+    //Date Row
     else if (indexPath.row == 1)
     {
-        return 120.0;
+        return 55.0;
     }
     
-    //subGoal Row
+    //description Row
     else if (indexPath.row == 2)
     {
-        return 44.0;
+        return 145.0;
     }
     
-    //addSubGoalbutton row
-    else if (indexPath.row == numberOfCells - 2)
+    else if (indexPath.row == 3)
     {
-        return 54.0;
+        return 55.0;
     }
     
-    //done button row
+    //subGoal rows
     else
     {
         return 55.0;
