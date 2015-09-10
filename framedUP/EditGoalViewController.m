@@ -62,15 +62,40 @@
 {
     [self.goal.managedObjectContext undo];
     
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)dismissViewControllerUponSaveButtonTap
 {
-    [self.view endEditing:YES];
-    [[GoalController sharedInstance] save];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+//    NSCharacterSet *charSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    if (!self.goal.goalTitle)
+    {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Goal Title" message:@"You are saving without a title for your Goal. Please add a title or tap \"Cancel\" to stop creating a goal." preferredStyle:UIAlertControllerStyleAlert];
+        
+        [[UIView appearanceWhenContainedIn:[UIAlertController class], nil] setBackgroundColor:[UIColor grayColor]];
+        
+        alert.view.layer.cornerRadius = 22;
+        alert.view.layer.masksToBounds = YES;
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            [self.goal.managedObjectContext undo];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [alert addAction:action];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleCancel handler:nil]];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    
+    else
+    {
+        [self.view endEditing:YES];
+        [[GoalController sharedInstance] save];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 /*

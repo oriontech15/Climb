@@ -44,7 +44,8 @@
         }
         cell.delegate = self;
         
-        cell.descriptionTextView.textColor = [UIColor blackColor];
+        cell.descriptionTextView.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
+
 
         return cell;
     }
@@ -63,6 +64,9 @@
         DatePickerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"goalDateCell"];
         
         cell.delegate = self;
+        
+        [cell.goalDatePicker setDate:[NSDate date]];
+        cell.goalDatePicker.minimumDate = [NSDate date];
         
         NSDateFormatter *dateGoalFormat = [[NSDateFormatter alloc] init];
         
@@ -201,9 +205,7 @@
 
 -(void)saveChangesButtonTappedToSaveChanges
 {
-    [self.dismissViewDelegate dismissViewControllerUponSaveButtonTap];
-    
-    [[GoalController sharedInstance] save];
+        [self.dismissViewDelegate dismissViewControllerUponSaveButtonTap];
 }
 
 #pragma mark - Editing The TableView
