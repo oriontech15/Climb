@@ -416,11 +416,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="ViN-of-obE">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-bD-8pY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-bD-8pY">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.039215686270000001" green="0.63529411759999999" blue="0.76470588240000004" alpha="1" colorSpace="deviceRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailViewTitleCell" rowHeight="55" id="VNq-4h-rda" customClass="DetailViewTitleTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="detailViewTitleCell" rowHeight="65" id="VNq-4h-rda" customClass="DetailViewTitleTableViewCell">
                                         <rect key="frame" x="0.0" y="22" width="600" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VNq-4h-rda" id="NQv-vc-Zmy">
@@ -428,8 +430,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoalTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sia-zM-bAh">
-                                                    <rect key="frame" x="8" y="11" width="584" height="36"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <rect key="frame" x="8" y="11" width="584" height="46"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                     <color key="textColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -442,6 +444,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="titleLabel" destination="Sia-zM-bAh" id="NPQ-Iq-e9U"/>
                                         </connections>
@@ -479,12 +482,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-xB-2jW">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="kmaskldmf" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-xB-2jW">
                                                     <rect key="frame" x="8" y="37" width="584" height="100"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <color key="textColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="backgroundColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOU-4l-1V4">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="35"/>
@@ -565,36 +573,45 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2h4-bD-8pY" firstAttribute="top" secondItem="62Q-VI-BH7" secondAttribute="bottom" id="0fU-rQ-3k6"/>
                             <constraint firstItem="wni-nu-BBI" firstAttribute="top" secondItem="2h4-bD-8pY" secondAttribute="bottom" id="2Kk-tP-k5F"/>
                             <constraint firstAttribute="trailing" secondItem="ViN-of-obE" secondAttribute="trailing" id="39j-hd-Xuh"/>
+                            <constraint firstAttribute="trailing" secondItem="2h4-bD-8pY" secondAttribute="trailing" id="HBd-n6-5F9"/>
                             <constraint firstItem="2h4-bD-8pY" firstAttribute="top" secondItem="62Q-VI-BH7" secondAttribute="bottom" id="KhR-w3-2Ip"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2h4-bD-8pY" secondAttribute="trailing" constant="-16" id="Sai-f8-wOK"/>
                             <constraint firstItem="2h4-bD-8pY" firstAttribute="leading" secondItem="v93-yH-7mT" secondAttribute="leadingMargin" constant="-16" id="UeY-uu-L5U"/>
                             <constraint firstItem="2h4-bD-8pY" firstAttribute="leading" secondItem="v93-yH-7mT" secondAttribute="leading" id="WiC-wJ-ca1"/>
                             <constraint firstItem="ViN-of-obE" firstAttribute="top" secondItem="v93-yH-7mT" secondAttribute="top" id="X3b-Be-TMJ"/>
+                            <constraint firstItem="wni-nu-BBI" firstAttribute="top" secondItem="2h4-bD-8pY" secondAttribute="bottom" id="Xz0-Rs-lQs"/>
                             <constraint firstItem="2h4-bD-8pY" firstAttribute="top" secondItem="62Q-VI-BH7" secondAttribute="bottom" id="YUE-6H-r6O"/>
                             <constraint firstItem="ViN-of-obE" firstAttribute="leading" secondItem="v93-yH-7mT" secondAttribute="leading" id="Z9K-EQ-B55"/>
+                            <constraint firstItem="2h4-bD-8pY" firstAttribute="leading" secondItem="v93-yH-7mT" secondAttribute="leading" id="elh-rs-6uA"/>
                             <constraint firstItem="wni-nu-BBI" firstAttribute="top" secondItem="2h4-bD-8pY" secondAttribute="bottom" id="lza-S7-7HA"/>
                             <constraint firstAttribute="trailing" secondItem="2h4-bD-8pY" secondAttribute="trailing" id="r7U-Vg-HSJ"/>
                             <constraint firstAttribute="bottom" secondItem="ViN-of-obE" secondAttribute="bottom" id="z1o-dX-Moe"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="KhR-w3-2Ip"/>
                                 <exclude reference="Sai-f8-wOK"/>
                                 <exclude reference="UeY-uu-L5U"/>
+                                <exclude reference="WiC-wJ-ca1"/>
                                 <exclude reference="YUE-6H-r6O"/>
+                                <exclude reference="r7U-Vg-HSJ"/>
                                 <exclude reference="2Kk-tP-k5F"/>
+                                <exclude reference="lza-S7-7HA"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIs-ft-tbz">
                         <barButtonItem key="leftBarButtonItem" image="TriangleDismiss" id="7yz-Qu-8YN">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" red="0.039215686270000001" green="0.63529411759999999" blue="0.76470588240000004" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <action selector="dismissButtonTapped:" destination="84I-Mi-qCH" id="HHb-2Y-CCl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="9C6-BO-oa4">
+                            <color key="tintColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="8HZ-oz-YEy" kind="presentation" identifier="editButton" id="XJg-Ms-XAI"/>
                             </connections>
@@ -611,7 +628,7 @@
             </objects>
             <point key="canvasLocation" x="2801" y="467"/>
         </scene>
-        <!--Goal View Controller-->
+        <!--Goal-->
         <scene sceneID="VaA-Zd-BNp">
             <objects>
                 <viewController id="pGf-0u-GV7" customClass="GoalViewController" sceneMemberID="viewController">
@@ -650,7 +667,7 @@
                                                         <constraint firstAttribute="height" constant="80" id="zOI-0T-TJ9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailButton-6" highlightedImage="detailButtonDownPress" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-uF-e8O">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailButton-7" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-uF-e8O">
                                                     <rect key="frame" x="19" y="484" width="556" height="55"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJw-Kr-2Nm">
@@ -680,7 +697,7 @@
                                                         <constraint firstAttribute="height" constant="59" id="Gla-zF-kGk"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRQ-vm-Eel">
@@ -755,7 +772,7 @@
                             <constraint firstItem="QGP-tf-Lsk" firstAttribute="top" secondItem="gSK-ja-WDr" secondAttribute="top" id="rvF-Bj-FT4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Group" id="fVu-7R-9o4"/>
+                    <tabBarItem key="tabBarItem" title="Goal" image="tabBarButtonMain" id="fVu-7R-9o4"/>
                     <connections>
                         <outlet property="collectionView" destination="gSK-ja-WDr" id="UCX-j8-7Tw"/>
                         <segue destination="dzd-DN-u23" kind="show" identifier="toDetailView" id="hmZ-4F-xfy"/>
@@ -790,7 +807,7 @@
         <scene sceneID="MeQ-3w-RLQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="otj-Lh-63m" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" image="slyphHome" id="mVf-xf-sKQ"/>
+                    <tabBarItem key="tabBarItem" title="List" image="tabBarButtonList" id="mVf-xf-sKQ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ccO-dY-XJ0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -847,17 +864,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group" width="28" height="26"/>
         <image name="Rectangle 2-3" width="344" height="107"/>
         <image name="TriangleDismiss" width="25" height="16"/>
-        <image name="detailButton-6" width="344" height="55"/>
-        <image name="detailButtonDownPress" width="344" height="55"/>
-        <image name="slyphHome" width="29" height="29"/>
+        <image name="detailButton-7" width="344" height="55"/>
+        <image name="tabBarButtonList" width="36" height="36"/>
+        <image name="tabBarButtonMain" width="36" height="36"/>
         <image name="textView-2" width="584" height="75"/>
         <image name="wallpaper" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="XJg-Ms-XAI"/>
         <segue reference="hmZ-4F-xfy"/>
-        <segue reference="jID-2B-Pl7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -205,15 +205,15 @@
 
 -(void)saveChangesButtonTappedToSaveChanges
 {
-        [self.dismissViewDelegate dismissViewControllerUponSaveButtonTap];
+    [self.dismissViewDelegate dismissViewControllerUponSaveButtonTap];
 }
 
 #pragma mark - Editing The TableView
 
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     NSInteger numberOfCells = 5 + self.goal.subGoals.count;
+    
     if (indexPath.row > 1 && indexPath.row < numberOfCells - 3)
     {
         return YES;

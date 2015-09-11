@@ -21,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.listTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    self.tabBarItem.image = [[UIImage imageNamed:@"tabBarButtonList.pdf"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabBarButtonList.pdf"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 -(void)viewWillAppear:(BOOL)animated

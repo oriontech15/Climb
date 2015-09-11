@@ -26,14 +26,29 @@
     
     ((GoalViewDataSource *)self.collectionView.dataSource).goalVC = self;
     
-    [self.navigationController.tabBarItem setImage:[[UIImage imageNamed:@"Mountain.pdf"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-    [self.tabBarItem setSelectedImage:[[UIImage imageNamed:@"Mountain.pdf"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
+    UITabBar *tabBar = self.tabBarController.tabBar;
+    
+    UITabBarItem *mainButton = [tabBar.items objectAtIndex:0];
+    UITabBarItem *listButton = [tabBar.items objectAtIndex:1];
+    
+    [mainButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
+    [listButton setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f], NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+    
+    [mainButton setImage:[[UIImage imageNamed:@"tabBarButtonMain.pdf"] imageWithRenderingMode:UIImageRenderingModeAutomatic]];
+    
+    [mainButton setSelectedImage:[[UIImage imageNamed:@"tabBarButtonMain.pdf"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    
+    [listButton setImage:[[UIImage imageNamed:@"tabBarButtonList.pdf"] imageWithRenderingMode:UIImageRenderingModeAutomatic]];
+    
+    [listButton setSelectedImage:[[UIImage imageNamed:@"tabBarButtonList.pdf"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+
     [self.collectionView reloadData];
 }
 

@@ -50,11 +50,10 @@
     {
         DetailViewDescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewDescriptionCell"];
         
-        cell.descriptionTextView.textAlignment = NSTextAlignmentCenter;
-        cell.descriptionTextView.textContainer.lineBreakMode = NSLineBreakByWordWrapping;
         cell.descriptionTextView.text = self.goal.goalDescription;
         cell.descriptionTextView.textColor = [UIColor colorWithRed:0.996f green:0.906f blue:0.333f alpha:1.00f];
-        
+        [cell.descriptionTextView setTextAlignment:NSTextAlignmentCenter];
+
         return cell;
     }
     
@@ -67,7 +66,7 @@
     
     else
     {
-        self.subGoal = [self.goal.subGoals objectAtIndex:indexPath.row - 3];
+        self.subGoal = [self.goal.subGoals objectAtIndex:indexPath.row - 4];
         
         DetailViewSubGoalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewSubGoalCell"];
         
@@ -82,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3 + self.goal.subGoals.count;
+    return 4 + self.goal.subGoals.count;
 }
 
 #pragma mark - TableView Delegate Methods
@@ -92,7 +91,7 @@
     //title Row
     if (indexPath.row == 0)
     {
-        return 55.0;
+        return 65.0;
     }
     
     //Date Row
@@ -117,6 +116,35 @@
     {
         return 55.0;
     }
+}
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
+    if (indexPath.row == 0 || indexPath.row == 1)
+    {
+        cell.separatorInset = UIEdgeInsetsMake(0.f, cell.bounds.size.width, 0.f, 0.f);
+    }
+    
+    if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3)
+    {
+        if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+            [cell setLayoutMargins:UIEdgeInsetsZero];
+        }
+    }
+    
+    else
+    {
+        cell.separatorInset = UIEdgeInsetsMake(0.f, cell.bounds.size.width, 0.f, 0.f);
+    }
+
 }
 
 @end
