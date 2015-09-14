@@ -41,6 +41,9 @@
     cell.collectionViewMonthLabel.text = getMonth;
     cell.collectionViewDayLabel.text = getDay;
     cell.collectionViewYearLabel.text = getYear;
+    
+    cell.collectionViewGoalLabel.minimumScaleFactor = 8./cell.collectionViewGoalLabel.font.pointSize;
+    cell.collectionViewGoalLabel.adjustsFontSizeToFitWidth = YES;
     cell.collectionViewGoalLabel.text = self.goal.goalTitle;
     
     return cell;

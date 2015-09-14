@@ -24,6 +24,8 @@
     {
         DetailViewTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"detailViewTitleCell"];
         
+        cell.titleLabel.adjustsFontSizeToFitWidth = YES;
+        cell.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         cell.titleLabel.text = self.goal.goalTitle;
         
         //cell.delegate = self;

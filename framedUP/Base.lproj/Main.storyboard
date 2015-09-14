@@ -224,7 +224,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ym-eS-FzW">
                                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
-                                                    <color key="backgroundColor" red="0.13333334029999999" green="0.61568629740000003" blue="0.78823536630000002" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" red="0.10980392160000001" green="0.81176470590000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal" title="New Sub Goal">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -269,8 +269,9 @@
                                                     <color key="textColor" red="0.99607843139999996" green="0.90588235289999997" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-U4-R4m">
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wjo-U4-R4m" customClass="GoalDatePicker">
                                                     <rect key="frame" x="8" y="23" width="584" height="162"/>
+                                                    <color key="tintColor" red="0.10980392160000001" green="0.81176470590000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="461526982.633928">
                                                         <!--2015-08-17 17:56:22 +0000-->
                                                     </date>
@@ -605,7 +606,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="vIs-ft-tbz">
                         <barButtonItem key="leftBarButtonItem" image="TriangleDismiss" id="7yz-Qu-8YN">
-                            <color key="tintColor" red="0.039215686270000001" green="0.63529411759999999" blue="0.76470588240000004" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="tintColor" red="0.10980392160000001" green="0.81176470590000005" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="dismissButtonTapped:" destination="84I-Mi-qCH" id="HHb-2Y-CCl"/>
                             </connections>
@@ -667,7 +668,7 @@
                                                         <constraint firstAttribute="height" constant="80" id="zOI-0T-TJ9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailButton-7" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-uF-e8O">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailButton-1" translatesAutoresizingMaskIntoConstraints="NO" id="XmR-uF-e8O">
                                                     <rect key="frame" x="19" y="484" width="556" height="55"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJw-Kr-2Nm">
@@ -678,7 +679,7 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                     <state key="normal" title="Goal Details">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" red="0.039215686270000001" green="0.63529411759999999" blue="0.76470588240000004" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
@@ -866,14 +867,14 @@
     <resources>
         <image name="Rectangle 2-3" width="344" height="107"/>
         <image name="TriangleDismiss" width="25" height="16"/>
-        <image name="detailButton-7" width="344" height="55"/>
+        <image name="detailButton-1" width="344" height="55"/>
         <image name="tabBarButtonList" width="36" height="36"/>
         <image name="tabBarButtonMain" width="36" height="36"/>
         <image name="textView-2" width="584" height="75"/>
         <image name="wallpaper" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XJg-Ms-XAI"/>
-        <segue reference="hmZ-4F-xfy"/>
+        <segue reference="jID-2B-Pl7"/>
+        <segue reference="w0J-Ox-mdo"/>
     </inferredMetricsTieBreakers>
 </document>
