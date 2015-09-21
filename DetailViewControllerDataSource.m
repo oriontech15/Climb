@@ -8,6 +8,7 @@
 
 #import "DetailViewControllerDataSource.h"
 #import "GoalController.h"
+#import "SubGoalTitleTableViewCell.h"
 
 @interface DetailViewControllerDataSource ()
 
@@ -61,7 +62,10 @@
     
     if (indexPath.row == 3)
     {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"permenantSubGoalTitle"];
+        SubGoalTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"permenantSubGoalTitle"];
+        
+        CGAffineTransform transform = CGAffineTransformMakeScale(1.0f, 5.0f);
+        cell.progressView.transform = transform;
         
         return cell;
     }
@@ -132,7 +136,7 @@
     
     if (indexPath.row == 0 || indexPath.row == 1)
     {
-        cell.separatorInset = UIEdgeInsetsMake(0.f, cell.bounds.size.width, 0.f, 0.f);
+        cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.size.width, 0, 0);
     }
     
     if (indexPath.row == 0 || indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3)
@@ -144,7 +148,7 @@
     
     else
     {
-        cell.separatorInset = UIEdgeInsetsMake(0.f, cell.bounds.size.width, 0.f, 0.f);
+        cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.size.width, 0, 0);
     }
 
 }

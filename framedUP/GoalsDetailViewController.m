@@ -9,11 +9,13 @@
 #import "GoalsDetailViewController.h"
 #import "DetailViewControllerDataSource.h"
 #import "EditGoalViewController.h"
+#import "SubGoalTitleTableViewCell.h"
 
 @interface GoalsDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet DetailViewControllerDataSource *dataSource;
+@property (strong, nonatomic) SubGoalTitleTableViewCell *subGoalCell;
 
 @end
 
@@ -42,6 +44,22 @@
 - (IBAction)dismissButtonTapped:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)buttonTapped:(UIButton *)sender {
+    
+    
+    //first time sender.selected is No
+    if (sender.selected)
+    {
+        
+        sender.selected=NO;
+    }
+    
+    else
+    {
+        sender.selected=YES;
+    }
 }
 
 #pragma mark - Navigation

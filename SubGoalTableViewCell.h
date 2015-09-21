@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 
 
 @protocol SubGoalTableViewCellDelegate;
@@ -15,6 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *subGoalTextField;
 @property (strong, nonatomic) id<SubGoalTableViewCellDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIButton *dateButton;
 
 @end
 

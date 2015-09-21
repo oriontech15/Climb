@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Goal.h"
+#import <QuartzCore/QuartzCore.h>
+
 @interface EditGoalViewController : UIViewController 
 
 @property (nonatomic, strong) Goal *goal;

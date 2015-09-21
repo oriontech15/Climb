@@ -9,7 +9,13 @@
 #import "EditGoalViewDataSource.h"
 #import "GoalController.h"
 
-@interface EditGoalViewDataSource () <GoalTitleTableViewCellTextFieldDelegate, SubGoalTableViewCellDelegate, DescriptionTableViewCellDelegate, addSubGoalTableViewCellDelegate, saveChangesButtonTableViewCellDelegate, DatePickerDelegate, UIPickerViewDelegate>
+@interface EditGoalViewDataSource () <GoalTitleTableViewCellTextFieldDelegate,
+                                                 SubGoalTableViewCellDelegate,
+                                             DescriptionTableViewCellDelegate,
+                                              addSubGoalTableViewCellDelegate,
+                                       saveChangesButtonTableViewCellDelegate,
+                                                           DatePickerDelegate,
+                                                          UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSDate *date;
@@ -86,6 +92,7 @@
         NSString *getDate = [dateGoalFormat stringFromDate:cell.goalDatePicker.date];
         
         cell.dateViewLabel.text = getDate;
+        [cell.goalDatePicker setValue: [UIColor colorWithRed:0.110f green:0.812f blue:0.996f alpha:1.00f] forKey:@"textColor"];
 
         return cell;
     }
@@ -231,8 +238,8 @@
 {
     UILabel *lblDate = [[UILabel alloc] init];
     [lblDate setFont:[UIFont systemFontOfSize:25.0]];
-    [lblDate setTextColor:[UIColor colorWithRed:0.000f green:1.000f blue:0.590f alpha:1.00f]]; //Light Green]];
-    [lblDate setBackgroundColor:[UIColor clearColor]];
+    [lblDate setTextColor:[UIColor colorWithRed:0.000f green:1.000f blue:0.590f alpha:1.00f]]; //Light Green;
+//    [lblDate setBackgroundColor:[UIColor clearColor]];
     
     return lblDate;
 }

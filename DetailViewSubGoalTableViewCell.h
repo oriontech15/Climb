@@ -11,5 +11,6 @@
 @interface DetailViewSubGoalTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *subGoalLabel;
+@property (weak, nonatomic) IBOutlet UIButton *check;
 
 @end

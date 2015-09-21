@@ -7,11 +7,13 @@
         <relationship name="subGoals" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="SubGoal" inverseName="goal" inverseEntity="SubGoal" syncable="YES"/>
     </entity>
     <entity name="SubGoal" representedClassName="SubGoal" syncable="YES">
+        <attribute name="subGoalDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="subGoalFinished" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="subGoalTitle" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="subGoals" inverseEntity="Goal" syncable="YES"/>
     </entity>
     <elements>
         <element name="Goal" positionX="-380" positionY="-132" width="128" height="105"/>
-        <element name="SubGoal" positionX="-54" positionY="18" width="128" height="75"/>
+        <element name="SubGoal" positionX="-54" positionY="18" width="128" height="105"/>
     </elements>
 </model>

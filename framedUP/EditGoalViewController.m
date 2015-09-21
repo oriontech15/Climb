@@ -21,7 +21,7 @@
 @property (nonatomic, strong) AddHeaderGoalTableViewCell *goalTitleCell;
 @property (nonatomic, strong) DescriptionTableViewCell *descriptionCell;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) IBOutlet EditGoalViewDataSource *dataSource;
+@property (nonatomic, strong) IBOutlet EditGoalViewDataSource *dataSource;
 
 @end
 

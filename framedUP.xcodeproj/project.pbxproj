@@ -11,6 +11,7 @@
 		DB0924511B97A0BF005F4453 /* GoalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924501B97A0BF005F4453 /* GoalCollectionViewCell.m */; };
 		DB1C6E3C1B8BC6DE00C9FE93 /* SubGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */; };
 		DB1C6E3F1B8BC6DE00C9FE93 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */; };
+		DB1D2FA11BAC9D42003D4511 /* SubGoalTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1D2FA01BAC9D42003D4511 /* SubGoalTitleTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DB46B8A81B66E3D400A3811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8A71B66E3D400A3811A /* main.m */; };
 		DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AA1B66E3D400A3811A /* AppDelegate.m */; };
 		DB46B8AE1B66E3D400A3811A /* GoalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AD1B66E3D400A3811A /* GoalViewController.m */; };
@@ -29,6 +30,7 @@
 		DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */; };
 		DBB230A31B7AB22E00D876B0 /* EditGoalViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A21B7AB22E00D876B0 /* EditGoalViewDataSource.m */; };
 		DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */; };
+		DBCC10421BAFC8DE00EBE064 /* ProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCC10411BAFC8DE00EBE064 /* ProgressController.m */; settings = {ASSET_TAGS = (); }; };
 		DBDD6F381B8E438B00E6B964 /* DetailViewTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F371B8E438B00E6B964 /* DetailViewTitleTableViewCell.m */; };
 		DBDD6F3B1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F3A1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m */; };
 		DBDD6F3E1B8E452F00E6B964 /* DetailViewDateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F3D1B8E452F00E6B964 /* DetailViewDateTableViewCell.m */; };
@@ -59,6 +61,8 @@
 		DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubGoal.m; path = ../SubGoal.m; sourceTree = "<group>"; };
 		DB1C6E3D1B8BC6DE00C9FE93 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Goal.h; path = ../Goal.h; sourceTree = "<group>"; };
 		DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Goal.m; path = ../Goal.m; sourceTree = "<group>"; };
+		DB1D2F9F1BAC9D42003D4511 /* SubGoalTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGoalTitleTableViewCell.h; sourceTree = "<group>"; };
+		DB1D2FA01BAC9D42003D4511 /* SubGoalTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGoalTitleTableViewCell.m; sourceTree = "<group>"; };
 		DB46B8A21B66E3D400A3811A /* framedUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = framedUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB46B8A61B66E3D400A3811A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB46B8A71B66E3D400A3811A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		DB78EF651B825AF200F9262E /* DatePickerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerTableViewCell.m; sourceTree = "<group>"; };
 		DB78EF671B825B0D00F9262E /* SubGoalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGoalTableViewCell.h; sourceTree = "<group>"; };
 		DB78EF681B825B0D00F9262E /* SubGoalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGoalTableViewCell.m; sourceTree = "<group>"; };
+		DB7E93E01BAE513400411DFE /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		DB9DFF771B7D53B000411E0B /* AddHeaderGoalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHeaderGoalTableViewCell.h; sourceTree = "<group>"; };
 		DB9DFF781B7D53B000411E0B /* AddHeaderGoalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHeaderGoalTableViewCell.m; sourceTree = "<group>"; };
 		DBB2308A1B7AB00700D876B0 /* EditGoalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditGoalViewController.h; path = framedUP/EditGoalViewController.h; sourceTree = "<group>"; };
@@ -94,6 +99,8 @@
 		DBB230A21B7AB22E00D876B0 /* EditGoalViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoalViewDataSource.m; sourceTree = "<group>"; };
 		DBB230A41B7AB24F00D876B0 /* GoalsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsListViewDataSource.h; sourceTree = "<group>"; };
 		DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListViewDataSource.m; sourceTree = "<group>"; };
+		DBCC10401BAFC8DE00EBE064 /* ProgressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressController.h; sourceTree = "<group>"; };
+		DBCC10411BAFC8DE00EBE064 /* ProgressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressController.m; sourceTree = "<group>"; };
 		DBDD6F361B8E438B00E6B964 /* DetailViewTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewTitleTableViewCell.h; sourceTree = "<group>"; };
 		DBDD6F371B8E438B00E6B964 /* DetailViewTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewTitleTableViewCell.m; sourceTree = "<group>"; };
 		DBDD6F391B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewDescriptionTableViewCell.h; sourceTree = "<group>"; };
@@ -170,6 +177,8 @@
 				DBF1B5371B83AF82006E4DD0 /* Stack.h */,
 				DBF1B5381B83AF82006E4DD0 /* Stack.m */,
 				DB46B8AF1B66E3D400A3811A /* Main.storyboard */,
+				DBCC10401BAFC8DE00EBE064 /* ProgressController.h */,
+				DBCC10411BAFC8DE00EBE064 /* ProgressController.m */,
 				DBEAEC651BA642B1009793BD /* GoalDatePicker.h */,
 				DBEAEC661BA642B1009793BD /* GoalDatePicker.m */,
 				DB46B8B21B66E3D400A3811A /* Images.xcassets */,
@@ -265,6 +274,8 @@
 				DBDD6F3D1B8E452F00E6B964 /* DetailViewDateTableViewCell.m */,
 				DBDD6F3F1B8E455500E6B964 /* DetailViewSubGoalTableViewCell.h */,
 				DBDD6F401B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m */,
+				DB1D2F9F1BAC9D42003D4511 /* SubGoalTitleTableViewCell.h */,
+				DB1D2FA01BAC9D42003D4511 /* SubGoalTitleTableViewCell.m */,
 			);
 			name = DetailViewCells;
 			sourceTree = "<group>";
@@ -313,7 +324,7 @@
 		DB46B89A1B66E3D400A3811A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Justin Smith";
 				TargetAttributes = {
 					DB46B8A11B66E3D400A3811A = {
@@ -386,9 +397,11 @@
 				DB0924511B97A0BF005F4453 /* GoalCollectionViewCell.m in Sources */,
 				DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */,
 				DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */,
+				DBCC10421BAFC8DE00EBE064 /* ProgressController.m in Sources */,
 				DB46B8A81B66E3D400A3811A /* main.m in Sources */,
 				DB1C6E3C1B8BC6DE00C9FE93 /* SubGoal.m in Sources */,
 				DB78EF661B825AF200F9262E /* DatePickerTableViewCell.m in Sources */,
+				DB1D2FA11BAC9D42003D4511 /* SubGoalTitleTableViewCell.m in Sources */,
 				DBF1B5361B83A7A2006E4DD0 /* SaveChangesTableViewCell.m in Sources */,
 				DB09244E1B9797E3005F4453 /* GoalViewDataSource.m in Sources */,
 				DBDD6F3B1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m in Sources */,
@@ -458,6 +471,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -523,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = framedUP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -533,6 +548,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = framedUP/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -541,16 +557,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = framedUPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/framedUP.app/framedUP";
 			};
@@ -560,12 +574,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = framedUPTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/framedUP.app/framedUP";
 			};
@@ -607,6 +619,7 @@
 		DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				DB7E93E01BAE513400411DFE /* Model 2.xcdatamodel */,
 				DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */,
 			);
 			currentVersion = DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */;
