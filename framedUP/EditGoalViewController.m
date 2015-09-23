@@ -14,7 +14,7 @@
 #import "EditGoalViewDataSource.h"
 #import "GoalController.h"
 
-@interface EditGoalViewController () <DisMissViewControllerDelegate,SubGoalTableViewCellDelegate>
+@interface EditGoalViewController () <DisMissViewControllerDelegate, SubGoalDateButtonDelegate>
 
 @property (nonatomic, strong) DatePickerTableViewCell *goalPickerCell;
 @property (nonatomic, strong) SubGoalTableViewCell *subGoalCell;

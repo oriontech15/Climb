@@ -21,7 +21,7 @@
 
 - (IBAction)subGoalDateButtonTapped:(id)sender
 {
-    [self.delegate subGoalDateButtonTapped];
+    [self.dateButtonDelegate subGoalDateButtonTapped];
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
