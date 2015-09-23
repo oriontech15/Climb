@@ -23,5 +23,6 @@
 @protocol SubGoalTableViewCellDelegate <NSObject>
 
 - (void)subGoalTextFieldUpdated:(SubGoalTableViewCell *)subGoalCell;
+- (void)subGoalDateButtonTapped;
 
 @end

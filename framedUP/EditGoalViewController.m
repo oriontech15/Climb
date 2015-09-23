@@ -14,7 +14,7 @@
 #import "EditGoalViewDataSource.h"
 #import "GoalController.h"
 
-@interface EditGoalViewController () <DisMissViewControllerDelegate>
+@interface EditGoalViewController () <DisMissViewControllerDelegate,SubGoalTableViewCellDelegate>
 
 @property (nonatomic, strong) DatePickerTableViewCell *goalPickerCell;
 @property (nonatomic, strong) SubGoalTableViewCell *subGoalCell;
@@ -96,6 +96,13 @@
         [[GoalController sharedInstance] save];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+}
+
+-(void)subGoalDateButtonTapped
+{
+    UIDatePicker *subGoalDatePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, 0, subGoalDatePicker.frame.size.width, subGoalDatePicker.frame.size.height)];
+    
+    [self.view addSubview:subGoalDatePicker];
 }
 
 /*

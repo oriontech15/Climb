@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		DB09244E1B9797E3005F4453 /* GoalViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DB09244D1B9797E3005F4453 /* GoalViewDataSource.m */; };
 		DB0924511B97A0BF005F4453 /* GoalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0924501B97A0BF005F4453 /* GoalCollectionViewCell.m */; };
-		DB1C6E3C1B8BC6DE00C9FE93 /* SubGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */; };
-		DB1C6E3F1B8BC6DE00C9FE93 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */; };
 		DB1D2FA11BAC9D42003D4511 /* SubGoalTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1D2FA01BAC9D42003D4511 /* SubGoalTitleTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		DB46B8A81B66E3D400A3811A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8A71B66E3D400A3811A /* main.m */; };
 		DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB46B8AA1B66E3D400A3811A /* AppDelegate.m */; };
@@ -30,6 +28,10 @@
 		DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB2309E1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m */; };
 		DBB230A31B7AB22E00D876B0 /* EditGoalViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A21B7AB22E00D876B0 /* EditGoalViewDataSource.m */; };
 		DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */; };
+		DBC9B5E51BB1AF3600001B32 /* SubGoal+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9B5DE1BB1AF3600001B32 /* SubGoal+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		DBC9B5E61BB1AF3600001B32 /* SubGoal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9B5E01BB1AF3600001B32 /* SubGoal.m */; settings = {ASSET_TAGS = (); }; };
+		DBC9B5E71BB1AF3600001B32 /* Goal+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9B5E21BB1AF3600001B32 /* Goal+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		DBC9B5E81BB1AF3600001B32 /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9B5E41BB1AF3600001B32 /* Goal.m */; settings = {ASSET_TAGS = (); }; };
 		DBCC10421BAFC8DE00EBE064 /* ProgressController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCC10411BAFC8DE00EBE064 /* ProgressController.m */; settings = {ASSET_TAGS = (); }; };
 		DBDD6F381B8E438B00E6B964 /* DetailViewTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F371B8E438B00E6B964 /* DetailViewTitleTableViewCell.m */; };
 		DBDD6F3B1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDD6F3A1B8E44F400E6B964 /* DetailViewDescriptionTableViewCell.m */; };
@@ -57,10 +59,6 @@
 		DB09244D1B9797E3005F4453 /* GoalViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalViewDataSource.m; sourceTree = "<group>"; };
 		DB09244F1B97A0BF005F4453 /* GoalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalCollectionViewCell.h; sourceTree = "<group>"; };
 		DB0924501B97A0BF005F4453 /* GoalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalCollectionViewCell.m; sourceTree = "<group>"; };
-		DB1C6E3A1B8BC6DE00C9FE93 /* SubGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubGoal.h; path = ../SubGoal.h; sourceTree = "<group>"; };
-		DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubGoal.m; path = ../SubGoal.m; sourceTree = "<group>"; };
-		DB1C6E3D1B8BC6DE00C9FE93 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Goal.h; path = ../Goal.h; sourceTree = "<group>"; };
-		DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Goal.m; path = ../Goal.m; sourceTree = "<group>"; };
 		DB1D2F9F1BAC9D42003D4511 /* SubGoalTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGoalTitleTableViewCell.h; sourceTree = "<group>"; };
 		DB1D2FA01BAC9D42003D4511 /* SubGoalTitleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGoalTitleTableViewCell.m; sourceTree = "<group>"; };
 		DB46B8A21B66E3D400A3811A /* framedUP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = framedUP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +97,14 @@
 		DBB230A21B7AB22E00D876B0 /* EditGoalViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditGoalViewDataSource.m; sourceTree = "<group>"; };
 		DBB230A41B7AB24F00D876B0 /* GoalsListViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalsListViewDataSource.h; sourceTree = "<group>"; };
 		DBB230A51B7AB24F00D876B0 /* GoalsListViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoalsListViewDataSource.m; sourceTree = "<group>"; };
+		DBC9B5DD1BB1AF3600001B32 /* SubGoal+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SubGoal+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DBC9B5DE1BB1AF3600001B32 /* SubGoal+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SubGoal+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DBC9B5DF1BB1AF3600001B32 /* SubGoal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubGoal.h; sourceTree = "<group>"; };
+		DBC9B5E01BB1AF3600001B32 /* SubGoal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubGoal.m; sourceTree = "<group>"; };
+		DBC9B5E11BB1AF3600001B32 /* Goal+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Goal+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DBC9B5E21BB1AF3600001B32 /* Goal+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Goal+CoreDataProperties.m"; sourceTree = "<group>"; };
+		DBC9B5E31BB1AF3600001B32 /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		DBC9B5E41BB1AF3600001B32 /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
 		DBCC10401BAFC8DE00EBE064 /* ProgressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressController.h; sourceTree = "<group>"; };
 		DBCC10411BAFC8DE00EBE064 /* ProgressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressController.m; sourceTree = "<group>"; };
 		DBDD6F361B8E438B00E6B964 /* DetailViewTitleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewTitleTableViewCell.h; sourceTree = "<group>"; };
@@ -163,14 +169,18 @@
 		DB46B8A41B66E3D400A3811A /* framedUP */ = {
 			isa = PBXGroup;
 			children = (
+				DBC9B5DD1BB1AF3600001B32 /* SubGoal+CoreDataProperties.h */,
+				DBC9B5DE1BB1AF3600001B32 /* SubGoal+CoreDataProperties.m */,
+				DBC9B5DF1BB1AF3600001B32 /* SubGoal.h */,
+				DBC9B5E01BB1AF3600001B32 /* SubGoal.m */,
+				DBC9B5E11BB1AF3600001B32 /* Goal+CoreDataProperties.h */,
+				DBC9B5E21BB1AF3600001B32 /* Goal+CoreDataProperties.m */,
+				DBC9B5E31BB1AF3600001B32 /* Goal.h */,
+				DBC9B5E41BB1AF3600001B32 /* Goal.m */,
 				DB09244F1B97A0BF005F4453 /* GoalCollectionViewCell.h */,
 				DB0924501B97A0BF005F4453 /* GoalCollectionViewCell.m */,
 				DB46B8A91B66E3D400A3811A /* AppDelegate.h */,
 				DB46B8AA1B66E3D400A3811A /* AppDelegate.m */,
-				DB1C6E3D1B8BC6DE00C9FE93 /* Goal.h */,
-				DB1C6E3E1B8BC6DE00C9FE93 /* Goal.m */,
-				DB1C6E3A1B8BC6DE00C9FE93 /* SubGoal.h */,
-				DB1C6E3B1B8BC6DE00C9FE93 /* SubGoal.m */,
 				DBF1B53A1B83B07D006E4DD0 /* Model.xcdatamodeld */,
 				DBB230961B7AB0D100D876B0 /* GoalController.h */,
 				DBB230971B7AB0D100D876B0 /* GoalController.m */,
@@ -380,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB1C6E3F1B8BC6DE00C9FE93 /* Goal.m in Sources */,
 				DBF1B5391B83AF82006E4DD0 /* Stack.m in Sources */,
 				DBDD6F411B8E455500E6B964 /* DetailViewSubGoalTableViewCell.m in Sources */,
 				DBB2309F1B7AB1FD00D876B0 /* DetailViewControllerDataSource.m in Sources */,
@@ -389,6 +398,7 @@
 				DBEAEC671BA642B1009793BD /* GoalDatePicker.m in Sources */,
 				DB46B8AE1B66E3D400A3811A /* GoalViewController.m in Sources */,
 				DB78EF631B825AD800F9262E /* DescriptionTableViewCell.m in Sources */,
+				DBC9B5E71BB1AF3600001B32 /* Goal+CoreDataProperties.m in Sources */,
 				DBB230981B7AB0D100D876B0 /* GoalController.m in Sources */,
 				DB9DFF791B7D53B000411E0B /* AddHeaderGoalTableViewCell.m in Sources */,
 				DBFF830E1B8CF751003577D7 /* AddSubGoalTableViewCell.m in Sources */,
@@ -396,11 +406,13 @@
 				DBB2308C1B7AB00700D876B0 /* EditGoalViewController.m in Sources */,
 				DB0924511B97A0BF005F4453 /* GoalCollectionViewCell.m in Sources */,
 				DB46B8AB1B66E3D400A3811A /* AppDelegate.m in Sources */,
+				DBC9B5E81BB1AF3600001B32 /* Goal.m in Sources */,
 				DBB230A61B7AB24F00D876B0 /* GoalsListViewDataSource.m in Sources */,
+				DBC9B5E61BB1AF3600001B32 /* SubGoal.m in Sources */,
 				DBCC10421BAFC8DE00EBE064 /* ProgressController.m in Sources */,
 				DB46B8A81B66E3D400A3811A /* main.m in Sources */,
-				DB1C6E3C1B8BC6DE00C9FE93 /* SubGoal.m in Sources */,
 				DB78EF661B825AF200F9262E /* DatePickerTableViewCell.m in Sources */,
+				DBC9B5E51BB1AF3600001B32 /* SubGoal+CoreDataProperties.m in Sources */,
 				DB1D2FA11BAC9D42003D4511 /* SubGoalTitleTableViewCell.m in Sources */,
 				DBF1B5361B83A7A2006E4DD0 /* SaveChangesTableViewCell.m in Sources */,
 				DB09244E1B9797E3005F4453 /* GoalViewDataSource.m in Sources */,
@@ -622,7 +634,7 @@
 				DB7E93E01BAE513400411DFE /* Model 2.xcdatamodel */,
 				DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */,
 			);
-			currentVersion = DBF1B53B1B83B07D006E4DD0 /* Model.xcdatamodel */;
+			currentVersion = DB7E93E01BAE513400411DFE /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

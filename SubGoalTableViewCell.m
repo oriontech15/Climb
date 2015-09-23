@@ -19,6 +19,11 @@
     [self.delegate subGoalTextFieldUpdated:self];
 }
 
+- (IBAction)subGoalDateButtonTapped:(id)sender
+{
+    [self.delegate subGoalDateButtonTapped];
+}
+
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
